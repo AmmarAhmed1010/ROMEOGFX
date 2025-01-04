@@ -49,6 +49,7 @@ const Header = () => {
             to="featured"
             smooth={true}
             duration={500}
+            offset={-100}
             className="text-xl cursor-pointer hover:text-red-500"
             onClick={toggleMenu}
           >
@@ -66,6 +67,7 @@ const Header = () => {
           <Link
             to="skills"
             smooth={true}
+            offset={-180}
             duration={500}
             className="cursor-pointer hover:text-red-500"
           >
@@ -74,6 +76,7 @@ const Header = () => {
           <Link
             to="plans"
             smooth={true}
+            offset={-100}
             duration={500}
             className="cursor-pointer hover:text-red-500"
           >
@@ -83,6 +86,7 @@ const Header = () => {
           <Link
             to="services"
             smooth={true}
+            offset={-150}
             duration={500}
             className="cursor-pointer hover:text-red-500"
           >
@@ -90,8 +94,10 @@ const Header = () => {
           </Link>
           <Link
             to="contact"
+            
             smooth={true}
             duration={500}
+            offset={-150}
             className="cursor-pointer hover:text-red-500"
           >
             Contact
@@ -151,6 +157,7 @@ const Header = () => {
           to="featured"
           smooth={true}
           duration={500}
+          offset={-150}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -160,6 +167,7 @@ const Header = () => {
           to="skills"
           smooth={true}
           duration={500}
+          offset={-150}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -169,6 +177,7 @@ const Header = () => {
           to="plans"
           smooth={true}
           duration={500}
+          offset={-150}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -178,6 +187,7 @@ const Header = () => {
           to="services"
           smooth={true}
           duration={500}
+          offset={-500}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -187,6 +197,7 @@ const Header = () => {
           to="testimonials"
           smooth={true}
           duration={500}
+          offset={-150}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -196,6 +207,7 @@ const Header = () => {
           to="contact"
           smooth={true}
           duration={500}
+          offset={-150}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >

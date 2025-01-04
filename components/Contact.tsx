@@ -23,10 +23,10 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id='contact' className="my-10 text-[#EEAF48]">
+    <section id='contact' className="my-10">
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+        <h2 className="text-5xl font-bold text-[#A9BCC0] font-serif italic mb-8">Contact Me</h2>
         
         {/* Contact Form */}
         <form className="w-full max-w-lg mx-auto" onSubmit={handleSubmit}>

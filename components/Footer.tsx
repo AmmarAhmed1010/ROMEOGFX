@@ -3,9 +3,9 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className=" text-white py-8 mt-12">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="text-white py-8 mt-12">
+      <div className="mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:text-left">
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
@@ -18,24 +18,32 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="hover:text-red-500 transition">Home</a>
+                <a href="#home" className="hover:text-red-500 transition">
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-red-500 transition">About</a>
+                <a href="#about" className="hover:text-red-500 transition">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-red-500 transition">Services</a>
+                <a href="#services" className="hover:text-red-500 transition">
+                  Services
+                </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-red-500 transition">Contact</a>
+                <a href="#contact" className="hover:text-red-500 transition">
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
+            <h3 className="text-xl text-center font-semibold mb-4">Follow Us</h3>
+            <div className="flex justify-center md:justify-start space-x-4">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                 <FaFacebook className="text-3xl hover:text-blue-600 transition" />
               </a>
