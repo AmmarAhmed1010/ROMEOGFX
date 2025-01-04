@@ -10,7 +10,7 @@ import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
     <>
-      <div className="bg-blue-800 px-4 md:px-16">
+      <div className="bg-[#1c11c1c] px-4 md:px-16">
         <Hero />
         <FeaturedThumbnail />
         <Testimonials/>
