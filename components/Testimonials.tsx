@@ -5,22 +5,22 @@ const Testimonials: React.FC = () => {
   const testimonials = [
     {
       icon: <FaUserCircle size={40} />,
-      description: "RomeoGFX designed an amazing thumbnail that boosted my video's views!",
+      description: "RomeoGFX designed an amazing thumbnail that boosted my videos views!",
       subscribers: "1.2M Subscribers",
     },
     {
       icon: <FaUserCircle size={40} />,
-      description: "Creative and professional work! Highly recommend RomeoGFX's services.",
+      description: "Creative and professional work! Highly recommend RomeoGFXs services.",
       subscribers: "800K Subscribers",
     },
     {
       icon: <FaUserCircle size={40} />,
-      description: "Exceptional designs that truly stand out. My channel's visuals are on point!",
+      description: "Exceptional designs that truly stand out. My channels visuals are on point",
       subscribers: "500K Subscribers",
     },
     {
       icon: <FaUserCircle size={40} />,
-      description: "Fast and reliable! The thumbnails helped me gain more engagement.",
+      description: "Fast and reliablebThe thumbnails helped me gain more engagement.",
       subscribers: "2.3M Subscribers",
     },
     {
@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
     },
     {
       icon: <FaUserCircle size={40} />,
-      description: "RomeoGFX transformed my channel's branding. Highly impressed!",
+      description: "RomeoGFX transformed my channels branding. Highly impressed!",
       subscribers: "1.5M Subscribers",
     },
   ];
