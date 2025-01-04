@@ -36,8 +36,8 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <div id='testimonials' className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#A9BCC0] font-serif italic mb-8">
+    <div id='testimonials' className="flex  flex-col items-center justify-center min-h-screen">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#EFB048] font-serif italic mb-8">
         Testimonials
       </h1>
 
@@ -45,10 +45,10 @@ const Testimonials: React.FC = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-white h-[280px] rounded-lg shadow-md p-6 text-center"
+            className="flex flex-col items-center border-2 border-blue-700 h-[280px] rounded-lg shadow-md p-6 text-center"
           >
             <div className="text-blue-500 mb-4">{testimonial.icon}</div>
-            <p className="text-gray-700 text-sm md:text-base mb-4">
+            <p className="text-white text-sm md:text-base mb-4">
               {testimonial.description}
             </p>
             <p className="text-red-500 font-semibold">{testimonial.subscribers}</p>

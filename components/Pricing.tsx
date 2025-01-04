@@ -42,19 +42,19 @@ const Pricing: React.FC = () => {
   return (
     <section id='plans' className="py-16">
       <div className="mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#A9BCC0] font-serif italic mb-8">Design Packages</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#EFB048] font-serif italic mb-8">Design Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition"
+              className="border-2 border-blue-600 p-6 rounded-lg shadow-md hover:shadow-xl transition"
             >
               <h3 className="text-2xl font-bold text-blue-900">{pkg.title}</h3>
               <p className="text-gray-600 mt-2">{pkg.description}</p>
               <div className="text-4xl font-bold text-red-500 my-4">
                 {pkg.price}
               </div>
-              <ul className="text-left text-gray-700 space-y-2">
+              <ul className="text-left text-white space-y-2">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
                     <span className="text-green-500 mr-2">✓</span>

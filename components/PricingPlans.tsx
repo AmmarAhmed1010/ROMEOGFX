@@ -3,55 +3,55 @@ import React from 'react';
 const PricingPlans: React.FC = () => {
   const plans = [
     {
-      img: '/path/to/image1.jpg',
+      img: '/img1.png',
       description: 'Basic Thumbnail Design',
       price: '$50',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image2.jpg',
+      img: '/img1.png',
       description: 'Banner Design Package',
       price: '$100',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image3.jpg',
+      img: '/img1.png',
       description: 'YouTube Overlay Design',
       price: '$80',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image4.jpg',
+      img: '/img1.png',
       description: 'Logo Design Package',
       price: '$120',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image5.jpg',
+      img: '/img1.png',
       description: 'Custom Thumbnail Design',
       price: '$70',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image6.jpg',
+      img: '/img1.png',
       description: 'Social Media Package',
       price: '$150',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image7.jpg',
+      img: '/img1.png',
       description: 'Web Banner Design',
       price: '$90',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image8.jpg',
+      img: '/img1.png',
       description: 'Complete Design Package',
       price: '$250',
       buttonText: 'Buy Now',
     },
     {
-      img: '/path/to/image9.jpg',
+      img: '/img1.png',
       description: 'Thumbnail & Banner Combo',
       price: '$130',
       buttonText: 'Buy Now',
@@ -67,7 +67,7 @@ const PricingPlans: React.FC = () => {
   return (
     <section id='services' className="">
       <div className="mx-auto">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#A9BCC0] font-serif italic text-center mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#EFB048] font-serif italic text-center mb-8">
           Our Pricing Plans
         </h2>
 
@@ -76,7 +76,7 @@ const PricingPlans: React.FC = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              className="border-2 border-blue-600 shadow-lg rounded-lg overflow-hidden"
             >
               {/* Plan Image */}
               <img
@@ -87,10 +87,10 @@ const PricingPlans: React.FC = () => {
 
               {/* Plan Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                <h3 className="text-xl font-semibold text-white mb-4">
                   {plan.description}
                 </h3>
-                <p className="text-2xl font-bold text-gray-900 mb-4">{plan.price}</p>
+                <p className="text-2xl font-bold text-white mb-4">{plan.price}</p>
 
                 {/* Buy Now Button */}
                 <a

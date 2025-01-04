@@ -11,20 +11,20 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#08151D] text-yellow-500 p-8 lg:p-10 fixed w-full top-0">
+    <header className="bg-[rgba(0,0,0,0.7)] text-yellow-500 px-6 py-8 lg:p-8 fixed w-full top-0">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        
+
         <div>
-  <Link
-    to="home"
-    smooth={true}
-    duration={500}
-    className="text-3xl font-bold cursor-pointer hover:text-red-500"
-  >
-    RomeoGfx
-  </Link>
-</div>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="text-3xl font-bold cursor-pointer hover:text-red-500"
+          >
+            RomeoGfx
+          </Link>
+        </div>
 
         {/* Navigation Links for Desktop */}
         <nav className="hidden md:flex space-x-8 text-lg">
@@ -65,15 +65,6 @@ const Header = () => {
             Testimonials
           </Link>
           <Link
-            to="skills"
-            smooth={true}
-            offset={-180}
-            duration={500}
-            className="cursor-pointer hover:text-red-500"
-          >
-            Skills
-          </Link>
-          <Link
             to="plans"
             smooth={true}
             offset={-100}
@@ -92,16 +83,7 @@ const Header = () => {
           >
             Services
           </Link>
-          <Link
-            to="contact"
-            
-            smooth={true}
-            duration={500}
-            offset={-150}
-            className="cursor-pointer hover:text-red-500"
-          >
-            Contact
-          </Link>
+          
         </nav>
 
         {/* Hamburger Icon */}
@@ -164,16 +146,6 @@ const Header = () => {
           Featured
         </Link>
         <Link
-          to="skills"
-          smooth={true}
-          duration={500}
-          offset={-150}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Skills
-        </Link>
-        <Link
           to="plans"
           smooth={true}
           duration={500}
@@ -203,16 +175,7 @@ const Header = () => {
         >
           Testimonials
         </Link>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={500}
-          offset={-150}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Contact
-        </Link>
+       
       </motion.div>
     </header>
   );

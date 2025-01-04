@@ -23,18 +23,28 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#home" className="hover:text-red-500 transition">
+                  My Work
+                </a>
+              </li>
+              <li>
+                <a href="#home" className="hover:text-red-500 transition">
+                  Featured
+                </a>
+              </li>
+              <li>
+                <a href="#home" className="hover:text-red-500 transition">
+                  Testimonials
+                </a>
+              </li>
+              <li>
                 <a href="#about" className="hover:text-red-500 transition">
-                  About
+                  Plans
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-red-500 transition">
                   Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-red-500 transition">
-                  Contact
                 </a>
               </li>
             </ul>
