@@ -36,7 +36,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gray-100 min-h-screen">
+    <div className="flex flex-col items-center justify-center p-6 min-h-screen">
       <h1 className="text-3xl md:text-5xl font-bold text-blue-900 mb-8">
         Testimonials
       </h1>
