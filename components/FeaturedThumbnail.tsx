@@ -4,7 +4,7 @@ const FeaturedThumbnail: React.FC = () => {
   const images = Array(6).fill('/img1.png'); // Reuse img1.png for all six items
 
   return (
-    <div className="text-[#EEAF48] flex flex-col items-center justify-center min-h-screen p-4">
+    <div id='featured' className="text-[#EEAF48] flex flex-col items-center justify-center min-h-screen p-4">
       {/* Heading */}
       <h1 className="text-3xl md:text-5xl font-bold mb-8">
         Featured Thumbnails

@@ -40,7 +40,7 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section id='plans' className="py-16">
       <div className="mx-auto text-center">
         <h2 className="text-4xl font-bold text-[#EEAF48]  mb-8">Design Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

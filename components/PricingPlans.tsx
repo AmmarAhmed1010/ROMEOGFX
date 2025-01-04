@@ -65,7 +65,7 @@ const PricingPlans: React.FC = () => {
   };
 
   return (
-    <section className="">
+    <section id='services' className="">
       <div className="mx-auto">
         <h2 className="text-3xl font-bold text-center text-[#EEAF48] mb-8">
           Our Pricing Plans
