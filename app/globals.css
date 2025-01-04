@@ -18,3 +18,66 @@ body {
 .main-section {
   @apply text-[#EEAF48] mx-auto my-12; /* Tailwind utility classes */
 }
+
+
+/* animaitons */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 10px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 15px #2563eb, 0 0 30px #2563eb, 0 0 10px #2563eb;
+  }
+  100% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 10px #3b82f6;
+  }
+}
+
+.glow-border {
+  border-color: transparent;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  background-clip: padding-box;
+  position: relative;
+  z-index: 1;
+  animation: glow 2s infinite;
+}
+/* 2 glow effect */
+
+/* 3 */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 15px #2563eb, 0 0 30px #2563eb;
+  }
+  100% {
+    box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+  }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 8px;
+  padding: 3px; /* Space for glowing border */
+  background: linear-gradient(45deg, #3b82f6, #2563eb, #3b82f6);
+  animation: glow 2s infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+

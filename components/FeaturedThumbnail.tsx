@@ -1,23 +1,28 @@
-import React from 'react';
+import React from "react";
 
 const FeaturedThumbnail: React.FC = () => {
-  const images = Array(6).fill('/img1.png'); // Reuse img1.png for all six items
+  // Replace with actual high-quality image URLs
+  const images = Array(9).fill("/img1.png"); 
 
   return (
-    <div id='featured' className="text-[#EEAF48] my-10 flex flex-col items-center justify-center min-h-screen">
+    <div
+      id="featured"
+      className="text-[#EEAF48] my-10 flex flex-col items-center justify-center min-h-screen"
+    >
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#EFB048] font-serif italic mb-8">
         Featured Thumbnails
       </h1>
 
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         {images.map((src, index) => (
-          <div
+          <img
             key={index}
-            className="aspect-square bg-cover bg-center rounded-lg shadow-md"
-            style={{ backgroundImage: `url(${src})` }}
-          ></div>
+            src={src}
+            alt={`Thumbnail ${index + 1}`}
+            className="rounded-lg shadow-md w-full h-auto object-cover"
+          />
         ))}
       </div>
 

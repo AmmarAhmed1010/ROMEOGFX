@@ -139,7 +139,7 @@ const Header = () => {
           to="featured"
           smooth={true}
           duration={500}
-          offset={-150}
+          offset={-110}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -149,7 +149,7 @@ const Header = () => {
           to="plans"
           smooth={true}
           duration={500}
-          offset={-150}
+          offset={-30}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -159,7 +159,7 @@ const Header = () => {
           to="services"
           smooth={true}
           duration={500}
-          offset={-500}
+          offset={-120}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -169,7 +169,7 @@ const Header = () => {
           to="testimonials"
           smooth={true}
           duration={500}
-          offset={-150}
+          offset={-110}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
