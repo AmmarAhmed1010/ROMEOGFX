@@ -3,8 +3,8 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-8 mt-12">
-      <div className="container mx-auto px-6">
+    <footer className=" text-white py-8 mt-12">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>

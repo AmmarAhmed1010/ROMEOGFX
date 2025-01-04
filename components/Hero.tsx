@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <div className="flex items-center  justify-center h-[90vh] text-white">
+    <div className="flex items-center main-section justify-center h-[90vh]">
       <div className="text-center space-y-6 max-w-4xl">
         {text.map((line: string, index: number) => (
           <h1 key={index} className="text-3xl md:text-5xl font-bold">
