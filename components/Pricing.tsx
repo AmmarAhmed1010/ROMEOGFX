@@ -2,7 +2,6 @@
 
 import React from "react";
 import { ButtonsCard } from "./Buttons"; // Update with the correct import path
-import { IconClipboard } from "@tabler/icons-react";
 
 const Pricing: React.FC = () => {
   const packages = [
