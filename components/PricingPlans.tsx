@@ -35,15 +35,10 @@ const PricingPlans: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-16 bg-[#101010]">
+    <section id="services" className="py-16">
       <div className="max-w-6xl mx-aut sm:px-6 lg:px-8">
       <h2
-  className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif italic text-center mb-12"
-  style={{
-    background: 'linear-gradient(to right, #F9F295, #E0AA3E, #E0AA3E, #B88A44)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  }}
+  className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif italic text-center mb-12 text-yellow-500"
 >
   Our Pricing Plans
 </h2>
@@ -53,7 +48,7 @@ const PricingPlans: React.FC = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="bg-[#1a1a1a] border-2 border-blue-600 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+              className="border-2 border-blue-600 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
             >
               {/* Plan Image */}
               <img
