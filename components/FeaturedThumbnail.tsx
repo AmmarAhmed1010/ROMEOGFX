@@ -27,7 +27,7 @@ const FeaturedThumbnail: React.FC = () => {
       </div>
 
       {/* View More Button */}
-      <button className="mt-8 px-6 py-3 bg-[#8B0000] text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400">
+      <button className="mt-8 px-6 py-3 bg-[#C11414] text-white font-semibold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400">
         View More Thumbnails
       </button>
     </div>
