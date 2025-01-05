@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[rgba(0,0,0,0.7)] text-yellow-500 px-6 py-8 lg:p-8 fixed w-full top-0">
+    <header className="bg-[#100213] text-yellow-500 px-6 py-8 lg:p-8 fixed w-full top-0">
       <div className="flex justify-between items-center">
         {/* Logo */}
 

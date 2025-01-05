@@ -21,7 +21,7 @@ const FeaturedThumbnail: React.FC = () => {
             key={index}
             src={src}
             alt={`Thumbnail ${index + 1}`}
-            className="rounded-lg shadow-md w-full h-auto object-cover border-4 border-blue-500"
+            className="rounded-lg shadow-md w-full h-auto object-cover border-2 border-blue-500"
           />
         ))}
       </div>
