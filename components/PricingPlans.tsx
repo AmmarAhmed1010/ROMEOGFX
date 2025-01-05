@@ -65,7 +65,7 @@ const PricingPlans: React.FC = () => {
   };
 
   return (
-    <section id='services' className="">
+    <section id="services" className="py-16">
       <div className="mx-auto">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold my-10 text-[#EFB048] font-serif italic text-center mb-8">
           Our Pricing Plans
@@ -82,25 +82,32 @@ const PricingPlans: React.FC = () => {
               <img
                 src={plan.img}
                 alt={plan.description}
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
 
               {/* Plan Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">
+                {/* Title and Line */}
+                <h3 className="text-xl font-semibold text-white mb-4 border-b-2 border-blue-600 pb-2">
                   {plan.description}
                 </h3>
-                <p className="text-2xl font-bold text-white mb-4">{plan.price}</p>
 
-                {/* Buy Now Button */}
-                <a
-                  href={whatsappLink(plan.description)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition text-center block"
-                >
-                  {plan.buttonText}
-                </a>
+                {/* Description */}
+                <p className="text-lg text-white mb-4">{plan.description}</p>
+
+                {/* Price & Buy Button */}
+                <div className="flex justify-between items-center">
+                  <p className="text-2xl font-bold text-white">{plan.price}</p>
+
+                  <a
+                    href={whatsappLink(plan.description)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-6 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition"
+                  >
+                    {plan.buttonText}
+                  </a>
+                </div>
               </div>
             </div>
           ))}
