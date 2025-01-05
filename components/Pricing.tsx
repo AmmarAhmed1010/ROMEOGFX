@@ -1,4 +1,8 @@
+"use client"; // Add this to make the Pricing component a Client Component
+
 import React from "react";
+import { ButtonsCard } from "./Buttons"; // Update with the correct import path
+import { IconClipboard } from "@tabler/icons-react";
 
 const Pricing: React.FC = () => {
   const packages = [
@@ -65,16 +69,9 @@ const Pricing: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href={`https://wa.me/+923158552233?text=${encodeURIComponent(
-                  pkg.message
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
+              <ButtonsCard onClick={() => window.location.href = `https://wa.me/+923158552233?text=${encodeURIComponent(pkg.message)}`}>
                 Buy Now
-              </a>
+              </ButtonsCard>
             </div>
           ))}
         </div>
