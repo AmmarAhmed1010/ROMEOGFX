@@ -1,4 +1,6 @@
+import FeaturedThumbnail from "@/components/FeaturedThumbnail";
 import Hero from "@/components/Hero";
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
@@ -7,10 +9,10 @@ export default function Home() {
         {/* <MenuNavbar/> */}
         {/* <Navbar/> */}
         <Hero />
-    
+        
         {/* <Layout/> */}
         {/* <ScrollImages/> */}
-        {/* <FeaturedThumbnail /> */}
+        <FeaturedThumbnail />
         {/* <WorkNavigation/> */}
         {/* <Testimonials/>
         <Pricing/>
