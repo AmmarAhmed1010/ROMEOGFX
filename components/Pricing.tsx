@@ -1,7 +1,4 @@
-"use client"; // Add this to make the Pricing component a Client Component
-
 import React from "react";
-import { ButtonsCard } from "./Buttons"; // Update with the correct import path
 
 const Pricing: React.FC = () => {
   const packages = [
@@ -53,8 +50,9 @@ const Pricing: React.FC = () => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="border-2 border-blue-600 p-6 rounded-lg shadow-md hover:shadow-xl transition"
+              className="border-gradient-animation p-6 rounded-lg shadow-md hover:shadow-xl transition"
             >
+              <div className="content2">
               <h3 className="text-2xl font-bold text-blue-900">{pkg.title}</h3>
               <p className="text-gray-600 mt-2">{pkg.description}</p>
               <div className="text-4xl font-bold text-red-500 my-4">
@@ -68,9 +66,17 @@ const Pricing: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <ButtonsCard onClick={() => window.location.href = `https://wa.me/+923158552233?text=${encodeURIComponent(pkg.message)}`}>
+              <a
+                href={`https://wa.me/+923158552233?text=${encodeURIComponent(
+                  pkg.message
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
                 Buy Now
-              </ButtonsCard>
+              </a>
+              </div>
             </div>
           ))}
         </div>
