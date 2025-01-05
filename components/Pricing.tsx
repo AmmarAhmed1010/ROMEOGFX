@@ -4,38 +4,39 @@ const Pricing: React.FC = () => {
   const packages = [
     {
       title: "Basic",
-      price: "$50",
+      price: "Rs: 1999",
       description: "Perfect for simple designs.",
       features: [
-        "2 YouTube Thumbnails",
+        "2 HD Thumbnails",
+        "1 Logo",
         "1 Banner Design",
-        "Delivery in 2 days",
-        "1 Revision",
+        "1 Non Animated Overlay",
       ],
+      message: "Hi, I am interested in the Basic Design Package for Rs: 1999.",
     },
     {
       title: "Standard",
-      price: "$100",
+      price: "Rs: 2999",
       description: "Ideal for growing creators.",
       features: [
-        "5 YouTube Thumbnails",
-        "2 Banner Designs",
-        "Delivery in 4 days",
-        "3 Revisions",
-        "Priority Support",
+        "2 HD Thumbnails",
+        "1 Logo",
+        "1 Banner Design",
+        "1 Animated Overlay",
       ],
+      message: "Hi, I am interested in the Standard Design Package for Rs: 2999.",
     },
     {
       title: "Premium",
-      price: "$200",
+      price: "Rs: 3599",
       description: "For professional creators.",
       features: [
-        "10 YouTube Thumbnails",
-        "5 Banner Designs",
-        "Delivery in 7 days",
-        "Unlimited Revisions",
-        "24/7 Support",
+        "4 HD Thumbnails",
+        "1 Logo",
+        "1 Banner Design",
+        "1 Animated Overlay",
       ],
+      message: "Hi, I am interested in the Premium Design Package for Rs: 3599.",
     },
   ];
 
@@ -49,7 +50,7 @@ const Pricing: React.FC = () => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className="border-2 border-blue-600 p-6 rounded-lg shadow-md hover:shadow-xl transition "
+              className="border-2 border-blue-600 p-6 rounded-lg shadow-md hover:shadow-xl transition"
             >
               <h3 className="text-2xl font-bold text-blue-900">{pkg.title}</h3>
               <p className="text-gray-600 mt-2">{pkg.description}</p>
@@ -64,9 +65,16 @@ const Pricing: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              <button className="mt-6 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Get Started
-              </button>
+              <a
+                href={`https://wa.me/+923158552233?text=${encodeURIComponent(
+                  pkg.message
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                Buy Now
+              </a>
             </div>
           ))}
         </div>
