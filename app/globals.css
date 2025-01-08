@@ -18,15 +18,6 @@ body {
   @apply text-[#EEAF48] mx-auto my-12; /* Tailwind utility classes */
 }
 
-.heading {
-  font-size: 2rem; /* Adjust size as needed */
-  font-weight: bold; /* Optional for bold text */
-  text-align: center; /* Optional for centering text */
-  background: linear-gradient(to right, #F9F295, #E0AA3E, #E0AA3E, #B88A44);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* animaitons */
 @keyframes glow {
   0% {
@@ -149,5 +140,15 @@ body {
   box-shadow: 0 0 6px blue, 0 0 6px red; /* Red glow effect */
 }
 
+/* heading animation with a glow effect */
+.heading{
+  font-weight: 900;
+text-align: center;
+background: linear-gradient(to right,red,blue);
+color: transparent;
+-webkit-background-clip: text;
+padding-bottom: 30px;
+font-style: italic;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-
+}

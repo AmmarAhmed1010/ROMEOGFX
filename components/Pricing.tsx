@@ -43,7 +43,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="plans" className="py-16">
       <div className="mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl my-10 font-bold text-[#EFB048] font-serif italic mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl heading">
           Design Packages
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

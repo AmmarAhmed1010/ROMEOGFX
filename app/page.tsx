@@ -15,7 +15,8 @@ export default function Home() {
         {/* <Navbar/> */}  
         {/* <Layout/> */}
         {/* <ScrollImages/> */}
-
+        
+        
         <WorkNavigation/>
         <Testimonials/>
         <Pricing/>
