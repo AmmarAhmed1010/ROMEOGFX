@@ -7,10 +7,10 @@ const FeaturedThumbnail: React.FC = () => {
   return (
     <div
       id="featured"
-      className="text-[#EEAF48] my-10 flex flex-col items-center justify-center"
+      className="my-10 flex flex-col items-center justify-center"
     >
       {/* Heading */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#EFB048] font-serif italic mb-8">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl heading">
         Featured Thumbnails
       </h1>
 

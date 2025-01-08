@@ -158,3 +158,18 @@ animation: anime 1s infinite alternate;
     text-shadow: 0 0 60px rgba(0, 13, 255, 0.5);
   }
 }
+
+
+/* buttons aniamitns */
+@layer utilities {
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-move 3s ease infinite;
+  }
+}
