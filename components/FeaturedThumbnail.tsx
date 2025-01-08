@@ -7,7 +7,7 @@ const FeaturedThumbnail: React.FC = () => {
   return (
     <div
       id="featured"
-      className="my-10 flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center"
     >
       {/* Heading */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl heading">
@@ -15,7 +15,7 @@ const FeaturedThumbnail: React.FC = () => {
       </h1>
 
       {/* Image Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">
         {images.map((src, index) => (
           <img
             key={index}

@@ -35,8 +35,8 @@ const PricingPlans: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-16">
-      <div className="sm:px-6 lg:px-8">
+    <section id="services" className="">
+      <div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl heading">
           Our Pricing Plans
         </h2>

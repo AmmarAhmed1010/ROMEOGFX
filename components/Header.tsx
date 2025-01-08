@@ -27,7 +27,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links for Desktop */}
-        <nav className="hidden md:flex space-x-8 text-lg">
+        <nav className="hidden lg:flex space-x-8 text-lg">
           <Link
             to="home"
             smooth={true}
@@ -87,7 +87,7 @@ const Header = () => {
         </nav>
 
         {/* Hamburger Icon */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
