@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 const Hero = () => {
   return (
     <div id="home" className="flex items-center justify-center min-h-[100vh] text-yellow-500">
-      <div className="text-center space-y-6">
+      <div className="text-center heading space-y-6">
         {/* This block will display the text with two lines on mobile, and one line on desktop */}
         <div className="text-5xl md:text-9xl  italic font-semibold leading-tight">
           <span className="block sm:inline">Creating for </span>

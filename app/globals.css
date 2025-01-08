@@ -150,5 +150,11 @@ color: transparent;
 padding-bottom: 30px;
 font-style: italic;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+text-shadow: 0 0 60px rgba(255, 0, 0, 0.5);
+animation: anime 1s infinite alternate;
+}
+@keyframes anime {
+  100%{
+    text-shadow: 0 0 60px rgba(0, 13, 255, 0.5);
+  }
 }
