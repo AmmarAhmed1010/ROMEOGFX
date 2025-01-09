@@ -7,7 +7,6 @@ import Pricing from "@/components/Pricing";
 import PricingPlans from "@/components/PricingPlans";
 import ScrollImages from "@/components/ScrollImages";
 import Testimonials from "@/components/Testimonials";
-import { TracingBeamDemo } from "@/components/TracingBeamDemo";
 import WorkNavigation from "@/components/WorkItems";
 
 export default function Home() {
