@@ -10,7 +10,7 @@ interface NavigationItem {
 }
 
 const navigationItems: NavigationItem[] = [
-  { id: 1, title: "Thumbnails", route: "/thumbnails", icon: <FaImage /> },
+  { id: 1, title: "Thumbnails", route: "/thumbnail.tsx", icon: <FaImage /> },
   { id: 2, title: "IRL Mockups", route: "/irl-mockups", icon: <FaDesktop /> },
   { id: 3, title: "Banners", route: "/banners", icon: <FaCamera /> },
   { id: 4, title: "Overlays", route: "/overlays", icon: <FaFilm /> },
