@@ -1,3 +1,4 @@
+import { AnimatedTestimonialsDemo } from "@/components/AnimatedTestimonials";
 import FeaturedThumbnail from "@/components/FeaturedThumbnail";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
@@ -14,6 +15,7 @@ export default function Home() {
         
         
         <Hero />
+        <AnimatedTestimonialsDemo/>
         <FeaturedThumbnail /> 
         <WorkNavigation/>
         <Testimonials/>

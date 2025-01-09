@@ -46,8 +46,9 @@ const PricingPlans: React.FC = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="border-2 border-blue-600 shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+              className="border-gradient-animation rounded-lg overflow-hidden hover:shadow-xl transition"
             >
+              <div className="content1">
               {/* Plan Image */}
               <img
                 src={plan.img}
@@ -75,6 +76,7 @@ const PricingPlans: React.FC = () => {
                   >
                     {plan.buttonText}
                   </a>
+                </div>
                 </div>
               </div>
             </div>

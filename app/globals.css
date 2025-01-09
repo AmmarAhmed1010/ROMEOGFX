@@ -98,30 +98,14 @@ body {
 /* Hide scrollbar for Chrome, Safari, and Edge */
 
 /* Container for the gradient border */
-.content1 {
-  background-color:black;
-  border-radius: 8px; /* Dark background for better text visibility */
-  /* Match the border radius of the outer container */
-  /* Light shadow for better separation */
-}
 .border-gradient-animation {
   position: relative;
   padding: 2px; /* Adjust the padding to create the border effect */
   border-radius: 8px; /* Adjust for rounded corners */
-  background: linear-gradient(45deg, blue, purple, blue, purple);
+  background: linear-gradient(45deg, blue, blue, red, red);
   background-size: 400% 400%;
   animation: borderAnimation 5s linear infinite;
   box-shadow: 0 0 6px rgba(255, 0, 0, 0.7), 0 0 6px rgba(255, 0, 0, 0.5); /* Red glow effect */
-}
-
-.border-gradient-animation2 {
-  position: relative;
-  padding: 2px; /* Adjust the padding to create the border effect */
-  border-radius: 50%; /* Adjust for rounded corners */
-  background: linear-gradient(45deg, yellow, red, black, red);
-  background-size: 400% 400%;
-  animation: borderAnimation 5s linear infinite;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow effect */
 }
 .content2 {
   position: relative;
@@ -130,14 +114,11 @@ body {
   border-radius: 8px; /* Match the border radius of the outer container */
   /* Light shadow for better separation */
 }
-.border-gradient-animation3 {
+.content1 {
   position: relative;
-  padding: 2px; /* Adjust the padding to create the border effect */
-  border-radius: 20px; /* Adjust for rounded corners */
-  background: linear-gradient(45deg, blue, red, black, red);
-  background-size: 400% 400%;
-  animation: borderAnimation 5s linear infinite;
-  box-shadow: 0 0 6px blue, 0 0 6px red; /* Red glow effect */
+  background-color:black; /* Dark background for better text visibility */
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* heading animation with a glow effect */
@@ -147,7 +128,8 @@ text-align: center;
 background: linear-gradient(to right,red,blue);
 color: transparent;
 -webkit-background-clip: text;
-padding: 40px;
+padding-bottom: 40px;
+padding-top: 40px;
 font-style: italic;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 text-shadow: 0 0 60px rgba(255, 0, 0, 0.5);

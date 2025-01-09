@@ -37,9 +37,9 @@ const Testimonials: React.FC = () => {
 
   return (
     <div id="testimonials" className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-4xl lg:text-5xl heading text-center">What Our Clients Say</h1>
+      <h1 className="text-3xl  lg:text-5xl heading text-center">What Our Clients Say</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4">
+      <div className="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}

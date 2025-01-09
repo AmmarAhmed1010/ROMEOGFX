@@ -26,7 +26,7 @@ const WorkNavigation: React.FC = () => {
       id="mywork"
       className="flex flex-col text-white"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl text-center heading">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl heading">
         Explore My Creative Work
       </h2>
       <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
