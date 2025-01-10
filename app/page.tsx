@@ -3,7 +3,6 @@ import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { BentoGridDemo } from "@/components/BentoGridDemo";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
-import PricingPlans from "@/components/PricingPlans";
 import WorkNavigation from "@/components/WorkItems";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
         <WorkNavigation/>
 
         <Pricing/>
-        {/* <PricingPlans/> */}
         <BackgroundGradientDemo/>
       </div>
     </>
