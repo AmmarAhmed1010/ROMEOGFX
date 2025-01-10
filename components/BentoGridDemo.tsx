@@ -12,9 +12,9 @@ import {
 
 export function BentoGridDemo() {
   return (
-    <div className="flex flex-col items-center justify-center w-full space-y-8">
+    <div className="flex flex-col items-center justify-center w-full ">
       {/* Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold text-blue-800">My Work</h1>
+      <h1 className="text-3xl md:text-4xl heading">Featured Work</h1>
 
       {/* Bento Grid */}
       <BentoGrid className="">
