@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,12 +16,12 @@ const Header = () => {
         {/* Logo */}
 
         <div>
-  <Link href="/" to="home">
-    <a className="text-3xl font-bold cursor-pointer hover:text-red-500">
-      RomeoGfx
-    </a>
-  </Link>
-</div>
+          <Link href="/" to="home">
+            <a className="text-3xl font-bold cursor-pointer hover:text-red-500">
+              RomeoGfx
+            </a>
+          </Link>
+        </div>
 
         {/* Navigation Links for Desktop */}
         <nav className="hidden lg:flex space-x-8 text-lg">
@@ -38,6 +37,7 @@ const Header = () => {
             to="mywork"
             smooth={true}
             duration={500}
+            offset={-80}
             className="text-xl cursor-pointer hover:text-red-500"
             onClick={toggleMenu}
           >
@@ -63,6 +63,16 @@ const Header = () => {
             Testimonials
           </Link>
           <Link
+            to="packages"
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className="cursor-pointer hover:text-red-500"
+          >
+            Packages
+          </Link>
+
+          <Link
             to="plans"
             smooth={true}
             offset={-100}
@@ -71,17 +81,6 @@ const Header = () => {
           >
             Plans
           </Link>
-
-          <Link
-            to="services"
-            smooth={true}
-            offset={-150}
-            duration={500}
-            className="cursor-pointer hover:text-red-500"
-          >
-            Services
-          </Link>
-          
         </nav>
 
         {/* Hamburger Icon */}
@@ -128,6 +127,7 @@ const Header = () => {
           to="mywork"
           smooth={true}
           duration={500}
+          offset={-100}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
@@ -147,33 +147,32 @@ const Header = () => {
           to="plans"
           smooth={true}
           duration={500}
-          offset={-30}
+          offset={-80}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
           Plans
         </Link>
         <Link
-          to="services"
+          to="packages"
           smooth={true}
           duration={500}
-          offset={-120}
+          offset={-80}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
-          Services
+          Packages
         </Link>
         <Link
           to="testimonials"
           smooth={true}
           duration={500}
-          offset={-110}
+          offset={-30}
           className="text-xl cursor-pointer hover:text-red-500"
           onClick={toggleMenu}
         >
           Testimonials
         </Link>
-       
       </motion.div>
     </header>
   );

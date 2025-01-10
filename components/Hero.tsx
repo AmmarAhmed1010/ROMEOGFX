@@ -19,9 +19,10 @@ const Hero = () => {
         <div className="flex justify-center gap-4 mt-8">
           {/* My Work Button */}
           <Link
-            to="myWork"
+            to="mywork"
             smooth={true}
             duration={500}
+            offset={-90}
             className="px-6 py-3 md:px-10 md:py-4 bg-[#29629E] text-white text-sm md:text-lg rounded-full shadow-lg hover:bg-red-600 transition-all duration-300 transform hover:scale-105 cursor-pointer"
             aria-label="Navigate to My Work section"
           >

@@ -44,7 +44,7 @@ export function Pricing() {
   ];
 
   return (
-    <div className="my-10">
+    <div id="packages" className="my-10">
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-4xl lg:text-5xl heading">
         Packages

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function BackgroundGradientDemo() {
   return (
-    <div className="my-10">
+    <div id="plans" className="my-10">
       {/* Heading */}
       <h2 className="text-center text-3xl md:text-4xl lg:text-5xl heading">
         My Plans
