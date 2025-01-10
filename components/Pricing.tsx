@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
+import { BackgroundGradient } from "./ui/background-gradient";
 
-const Pricing: React.FC = () => {
-  const packages = [
+export function Pricing() {
+  // Data for pricing plans
+  const plans = [
     {
       title: "Basic",
       price: "Rs: 1999",
@@ -41,48 +44,40 @@ const Pricing: React.FC = () => {
   ];
 
   return (
-    <section id="plans">
-      <div className="text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl heading">
-          Design Packages
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className="border-gradient-animation p-6 rounded-lg shadow-md hover:shadow-xl transition"
-            >
-              <div className="content2">
-              <h3 className="text-2xl font-bold text-blue-900">{pkg.title}</h3>
-              <p className="text-gray-600 mt-2">{pkg.description}</p>
-              <div className="text-4xl font-bold text-red-500 my-4">
-                {pkg.price}
-              </div>
-              <ul className="text-left text-white space-y-2">
-                {pkg.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <span className="text-green-500 mr-2">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+    <div className="my-10">
+      {/* Heading */}
+      <h2 className="text-center text-3xl md:text-4xl lg:text-5xl heading">
+        Packages
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Loop through the plans data to generate cards */}
+        {plans.map((plan, index) => (
+          <BackgroundGradient key={index} className="rounded-[22px] p-6 sm:p-10 bg-black ">
+            <p className="text-center font-bold text-2xl sm:text-3xl text-red-500 mt-4 mb-2">{plan.title}</p>
+            <p className="text-center text-white mb-2">{plan.description}</p>
+            <p className="text-center text-white font-bold text-xl">{plan.price}</p>
+            <ul className="text-center text-sm text-white mt-2 mb-4 space-y-2">
+              {plan.features.map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
+            <div className="text-center">
               <a
-                href={`https://wa.me/+923158552233?text=${encodeURIComponent(
-                  pkg.message
-                )}`}
+                href={`https://wa.me/+923158552233?text=${encodeURIComponent(plan.message)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="rounded-full pl-6 pr-4 py-2 text-white flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 transition-all"
               >
-                Buy Now
+                <span className="font-bold text-xs sm:text-sm">Buy now</span>
+                <span className="bg-gray-700 rounded-full text-[0.75rem] px-3 py-1 text-white">
+                  {plan.price}
+                </span>
               </a>
-              </div>
             </div>
-          ))}
-        </div>
+          </BackgroundGradient>
+        ))}
       </div>
-    </section>
+    </div>
   );
-};
-
-export default Pricing;
+}
