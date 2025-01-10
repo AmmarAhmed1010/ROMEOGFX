@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,15 +17,12 @@ const Header = () => {
         {/* Logo */}
 
         <div>
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            className="text-3xl font-bold cursor-pointer hover:text-red-500"
-          >
-            RomeoGfx
-          </Link>
-        </div>
+  <Link href="/" to="home">
+    <a className="text-3xl font-bold cursor-pointer hover:text-red-500">
+      RomeoGfx
+    </a>
+  </Link>
+</div>
 
         {/* Navigation Links for Desktop */}
         <nav className="hidden lg:flex space-x-8 text-lg">
