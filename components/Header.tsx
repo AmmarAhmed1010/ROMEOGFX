@@ -1,20 +1,39 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-[#0b010c] text-yellow-500 px-6 py-8 lg:p-8 z-50 fixed w-full top-0">
+    <header
+      className={`${
+        isScrolled ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
+      } bg-[#0b010c] text-yellow-500 px-6 py-4 lg:p-8 z-50 fixed w-full top-0 transition-all duration-300`}
+    >
       <div className="flex justify-between items-center">
         {/* Logo */}
-
         <div>
           <Link href="/" to="home">
             <a className="text-3xl font-bold cursor-pointer hover:text-red-500">
@@ -71,7 +90,6 @@ const Header = () => {
           >
             Packages
           </Link>
-
           <Link
             to="plans"
             smooth={true}
