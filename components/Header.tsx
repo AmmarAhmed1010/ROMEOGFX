@@ -1,42 +1,24 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <header
-      className={`${
-        isScrolled ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
-      } bg-[#0b010c] text-yellow-500 px-6 py-4 lg:p-8 z-50 fixed w-full top-0 transition-all duration-300`}
+      className="bg-[#0b010c] bg-opacity-80   text-white px-6 py-4 lg:px-8 lg:py-6 font-serif z-50 fixed w-full top-0"
     >
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
           <Link href="/" to="home">
-            <a className="text-3xl font-bold cursor-pointer hover:text-red-500">
+            <a className="text-2xl font-serif font-medium md:text-3xl cursor-pointer hover:text-red-500">
               RomeoGfx
             </a>
           </Link>
@@ -57,18 +39,16 @@ const Header = () => {
             smooth={true}
             duration={500}
             offset={-80}
-            className="text-xl cursor-pointer hover:text-red-500"
-            onClick={toggleMenu}
+            className="cursor-pointer hover:text-red-500"
           >
-            My work
+            My Work
           </Link>
           <Link
             to="featured"
             smooth={true}
             duration={500}
             offset={-100}
-            className="text-xl cursor-pointer hover:text-red-500"
-            onClick={toggleMenu}
+            className="cursor-pointer hover:text-red-500"
           >
             Featured
           </Link>
@@ -76,8 +56,7 @@ const Header = () => {
             to="testimonials"
             smooth={true}
             duration={500}
-            className="text-xl cursor-pointer hover:text-red-500"
-            onClick={toggleMenu}
+            className="cursor-pointer hover:text-red-500"
           >
             Testimonials
           </Link>
@@ -130,67 +109,78 @@ const Header = () => {
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? "0%" : "100%" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`fixed top-0 right-0 h-full w-[70%] bg-black text-white z-40 flex flex-col items-center justify-center space-y-6 md:hidden`}
+        className={`fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-8`}
       >
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          className="text-xl cursor-pointer hover:text-red-500"
+        {/* Close Icon */}
+        <button
           onClick={toggleMenu}
+          className="absolute top-6 right-6 text-white text-2xl"
         >
-          Home
-        </Link>
-        <Link
-          to="mywork"
-          smooth={true}
-          duration={500}
-          offset={-100}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          My work
-        </Link>
-        <Link
-          to="featured"
-          smooth={true}
-          duration={500}
-          offset={-110}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Featured
-        </Link>
-        <Link
-          to="plans"
-          smooth={true}
-          duration={500}
-          offset={-80}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Plans
-        </Link>
-        <Link
-          to="packages"
-          smooth={true}
-          duration={500}
-          offset={-80}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Packages
-        </Link>
-        <Link
-          to="testimonials"
-          smooth={true}
-          duration={500}
-          offset={-30}
-          className="text-xl cursor-pointer hover:text-red-500"
-          onClick={toggleMenu}
-        >
-          Testimonials
-        </Link>
+          ✖
+        </button>
+
+        {/* Navigation Links */}
+        <nav className="flex flex-col items-center space-y-6 text-center">
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Home
+          </Link>
+          <Link
+            to="mywork"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            My Work
+          </Link>
+          <Link
+            to="featured"
+            smooth={true}
+            duration={500}
+            offset={-110}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Featured
+          </Link>
+          <Link
+            to="plans"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Plans
+          </Link>
+          <Link
+            to="packages"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Packages
+          </Link>
+          <Link
+            to="testimonials"
+            smooth={true}
+            duration={500}
+            offset={-30}
+            className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            Testimonials
+          </Link>
+        </nav>
       </motion.div>
     </header>
   );

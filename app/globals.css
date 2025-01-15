@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   background-color: black;
 }
 
@@ -130,8 +130,8 @@ color: transparent;
 -webkit-background-clip: text;
 padding-bottom: 40px;
 padding-top: 40px;
-font-style: italic;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: serif;
+
 text-shadow: 0 0 60px rgba(255, 0, 0, 0.5);
 animation: anime 1s infinite alternate;
 }
