@@ -18,9 +18,12 @@ const Header = () => {
         {/* Logo */}
         <div>
           <Link href="/" to="home">
-            <a className="text-2xl font-serif font-medium md:text-3xl cursor-pointer hover:text-red-500">
-              RomeoGfx
-            </a>
+        <div className="text-2xl flex font-serif font-medium md:text-3xl cursor-pointer">
+        <h1>
+              Romeo
+            </h1>
+            <span className="text-red-700">Gfx</span>
+        </div>
           </Link>
         </div>
 
