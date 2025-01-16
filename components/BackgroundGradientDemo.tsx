@@ -13,7 +13,7 @@ export function BackgroundGradientDemo() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* First Card */}
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black">
+        <BackgroundGradient className="rounded-[22px] p-4 bg-black">
           <Image
             src={`/img1.png`} // Updated image source
             alt="jordans"
@@ -38,9 +38,9 @@ export function BackgroundGradientDemo() {
         </BackgroundGradient>
 
         {/* Second Card */}
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black">
+        <BackgroundGradient className="rounded-[22px] p-4  bg-black">
           <Image
-            src={`/img1.png`} // Updated image source
+            src={`/img2.jpg`} // Updated image source
             alt="jordans"
             height="400"
             width="400"
@@ -63,7 +63,7 @@ export function BackgroundGradientDemo() {
         </BackgroundGradient>
 
         {/* Third Card */}
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black">
+        <BackgroundGradient className="rounded-[22px] p-4  bg-black">
           <Image
             src={`/img1.png`} // Updated image source
             alt="jordans"
@@ -88,7 +88,7 @@ export function BackgroundGradientDemo() {
         </BackgroundGradient>
 
         {/* Fourth Card */}
-        <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-black">
+        <BackgroundGradient className="rounded-[22px] p-4 bg-black">
           <Image
             src={`/img1.png`} // Updated image source
             alt="jordans"

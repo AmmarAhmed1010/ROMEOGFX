@@ -4,7 +4,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: black;
+  background-color: #100213;
 }
 
 @layer base {
@@ -154,4 +154,32 @@ animation: anime 1s infinite alternate;
     background-size: 200% 200%;
     animation: gradient-move 3s ease infinite;
   }
+}
+
+
+/* moving courasel */
+@keyframes carousel-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes carousel-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.carousel-left-to-right {
+  animation: carousel-left-to-right 20s linear infinite;
+}
+
+.carousel-right-to-left {
+  animation: carousel-right-to-left 20s linear infinite;
 }
