@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import HeaderNew from '@/components/HeaderNew';
 
 const page = () => {
   const images = [
@@ -21,29 +22,36 @@ const page = () => {
   ];
 
   return (
-    <div
-      className="mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
-    >
-      {images.map((src, index) => (
-        <div
-          key={index}
-          className="relative w-full"
-          style={{
-            paddingTop: '75%', // Aspect ratio container
-          }}
-        >
-          <Image
-            src={src}
-            alt={`Image ${index + 1}`}
-            fill
+
+    <>
+    <HeaderNew/>
+    <div className="mt-24">
+      <h1 className="text-center heading text-3xl ">Thumbnails</h1>
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
+      >
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="relative w-full"
             style={{
-              objectFit: 'contain',
-              borderRadius: '0.75rem', // Rounded corners
+              paddingTop: '75%', // Aspect ratio container
             }}
-          />
-        </div>
-      ))}
+          >
+            <Image
+              src={src}
+              alt={`Image ${index + 1}`}
+              fill
+              style={{
+                objectFit: 'contain',
+                borderRadius: '0.75rem', // Rounded corners
+              }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
+    </>
   );
 };
 
