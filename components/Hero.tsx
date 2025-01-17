@@ -1,16 +1,29 @@
-"use client"
-import React from 'react';
-import { Link } from 'react-scroll';
+"use client";
+import React from "react";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
     <div
       id="home"
-      className="flex justify-center items-center w-full min-h-[100vh]"
+      className="relative mt-20 flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
     >
-      <div className="text-center">
+      {/* Background Video */}
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/video/vid.mp4" // Replace with your video path
+        autoPlay
+        loop
+        muted
+      />
+
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+
+      {/* Content */}
+      <div className="relative text-center z-10">
         {/* Heading */}
-        <div className="text-4xl md:text-8xl heading font-semibold italic leading-tight drop-shadow-md">
+        <div className="text-4xl md:text-8xl heading font-semibold italic leading-tight drop-shadow-md text-white">
           <span className="block sm:inline">Creating for </span>
           <span className="block sm:inline">Creators</span>
         </div>
