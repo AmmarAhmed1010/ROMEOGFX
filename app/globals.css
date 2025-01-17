@@ -4,9 +4,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #100213;
+  background-color: #100213 ;
 }
-
 @layer base {
   :root {
     --radius: 0.5rem;
