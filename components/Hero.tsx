@@ -6,19 +6,19 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative mt-20 flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
+      className="relative mt-28 flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
     >
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/video/vid.mp4" // Replace with your video path
+        src="/video/vid2.mp4" // Replace with your video path
         autoPlay
         loop
         muted
       />
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-full"></div>
 
       {/* Content */}
       <div className="relative text-center z-10">
