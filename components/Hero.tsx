@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative mt-28 flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
+      className="relative  flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
     >
       {/* Background Video */}
       <video
