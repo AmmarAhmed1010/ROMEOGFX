@@ -56,8 +56,8 @@ export function Pricing() {
           <BackgroundGradient key={index} className="rounded-[22px] p-6 sm:p-10 bg-black ">
             <p className="text-center font-bold text-2xl sm:text-3xl text-red-500 mt-4 mb-2">{plan.title}</p>
             <p className="text-center text-white mb-2">{plan.description}</p>
-            <p className="text-center text-white font-bold text-xl">{plan.price}</p>
-            <ul className="text-center text-sm text-white mt-2 mb-4 space-y-2">
+            <p className=" text-white font-bold text-xl">{plan.price}</p>
+            <ul className=" text-sm text-white mt-2 mb-4 space-y-2">
               {plan.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}

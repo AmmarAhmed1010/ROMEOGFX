@@ -31,23 +31,14 @@ const page = () => {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
       >
         {images.map((src, index) => (
-          <div
-            key={index}
-            className="relative w-full"
-            style={{
-              paddingTop: '75%', // Aspect ratio container
-            }}
-          >
-            <Image
-              src={src}
-              alt={`Image ${index + 1}`}
-              fill
-              style={{
-                objectFit: 'contain',
-                borderRadius: '0.75rem', // Rounded corners
-              }}
-            />
-          </div>
+           <Image 
+           key={index}
+           src={src}// Updated image source
+           alt={`Image ${index + 1}`}
+           height="400"
+           width="400"
+           className="object-contain rounded-3xl"
+           />
         ))}
       </div>
     </div>
