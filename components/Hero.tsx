@@ -8,15 +8,6 @@ const Hero = () => {
       id="home"
       className="relative  flex justify-center items-center w-full min-h-[100vh] overflow-hidden"
     >
-      {/* Background Video */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/video/vid2.mp4" // Replace with your video path
-        autoPlay
-        loop
-        muted
-      />
-
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full"></div>
 

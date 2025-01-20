@@ -8,6 +8,7 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    
 	 keyframes: {
         scrollBg: {
           "0%": { transform: "translateX(0)" },
@@ -18,6 +19,7 @@ export default {
         "scroll-bg": "scrollBg 15s linear infinite",
       },
   	extend: {
+      
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)'

@@ -51,7 +51,7 @@ const Carousel = () => {
             <img
               src={slide.image}
               alt={`Slide ${slide.id}`}
-              className="w-full max-h-[500px] rounded-3xl object-contain"
+              className="w-full max-h-[400px] rounded-3xl object-contain"
             />
           </div>
         ))}
