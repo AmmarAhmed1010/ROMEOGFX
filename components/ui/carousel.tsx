@@ -114,7 +114,6 @@ interface CarouselControlProps {
 }
 
 const CarouselControl = ({
-  type,
   title,
   handleClick,
 }: CarouselControlProps) => {
