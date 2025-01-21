@@ -1,3 +1,4 @@
+import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeamsWithCollisionDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { CarouselDemo } from "@/components/CarouselDemo";
 import Header from "@/components/Header";
@@ -10,7 +11,8 @@ export default function Home() {
 
         <Header/>
         {/* <Hero /> */}
-      <div className="px-4 mt-16 md:px-16 ">
+      <div className="px-4 mt-10 md:px-16 ">
+        <BackgroundBeamsWithCollisionDemo/>
         <CarouselDemo/>
         {/* <Carousel/> */}
       {/* <ColourfulTextDemo/> */}
