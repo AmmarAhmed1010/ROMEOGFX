@@ -50,12 +50,11 @@ export function BackgroundGradientDemo() {
         My Plans
       </h2>
 
-      <div id="list" className="flex overflow-x-auto gap-6">
+      <div className="flex gap-6">
         {cardData.map((card) => (
           <BackgroundGradient
-          
             key={card.id}
-            className="rounded-[22px] w-[200px] p-4 bg-black md:mx-auto"
+            className="rounded-[22px] p-4 bg-black md:mx-auto"
           >
             <Image
               src={card.imageSrc}
