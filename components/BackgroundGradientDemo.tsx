@@ -50,7 +50,7 @@ export function BackgroundGradientDemo() {
         My Plans
       </h2>
 
-      <div className="flex gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {cardData.map((card) => (
           <BackgroundGradient
             key={card.id}
