@@ -9,6 +9,7 @@ export default {
   ],
   theme: {
     
+    
 	 keyframes: {
         scrollBg: {
           "0%": { transform: "translateX(0)" },

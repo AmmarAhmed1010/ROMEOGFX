@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
-import { IconArrowNarrowRight } from "@tabler/icons-react";
+import {
+  IconArrowNarrowLeft,
+  IconArrowNarrowRight,
+} from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 
 interface SlideData {
@@ -91,15 +94,15 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             className="absolute inset-0 w-[120%] h-[120%] object-contain opacity-100 transition-opacity duration-600 ease-in-out"
             alt="Slide image"
             src={src}
-            width={1200} // Adjust according to your image's size
-            height={800} // Adjust according to your image's size
+            width={1200}
+            height={800}
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
             priority
           />
           {current === index && (
-            <div className="absolute inset-0  transition-all duration-1000" />
+            <div className="absolute inset-0 transition-all duration-1000" />
           )}
         </div>
       </li>
@@ -114,6 +117,7 @@ interface CarouselControlProps {
 }
 
 const CarouselControl = ({
+  type,
   title,
   handleClick,
 }: CarouselControlProps) => {
@@ -123,7 +127,11 @@ const CarouselControl = ({
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+      {type === "previous" ? (
+        <IconArrowNarrowLeft className="text-neutral-600 dark:text-neutral-200" />
+      ) : (
+        <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+      )}
     </button>
   );
 };
@@ -136,13 +144,15 @@ export function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
   const handlePreviousClick = () => {
-    const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
+    if (current > 0) {
+      setCurrent(current - 1);
+    }
   };
 
   const handleNextClick = () => {
-    const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
+    if (current < slides.length - 1) {
+      setCurrent(current + 1);
+    }
   };
 
   const handleSlideClick = (index: number) => {
@@ -154,39 +164,47 @@ export function Carousel({ slides }: CarouselProps) {
   const id = useId();
 
   return (
-    <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
-      aria-labelledby={`carousel-heading-${id}`}
-    >
-      <ul
-        className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
-        style={{
-          transform: `translateX(-${current * (100 / slides.length)}%)`,
-        }}
+    <div>
+      <h2
+        id={`carousel-heading-${id}`}
+        className="text-center text-white text-2xl font-bold mb-6"
       >
-        {slides.map((slide, index) => (
-          <Slide
-            key={index}
-            slide={slide}
-            index={index}
-            current={current}
-            handleSlideClick={handleSlideClick}
+        Featured
+      </h2>
+      <div
+        className="relative w-[70vmin] h-[70vmin] mx-auto"
+        aria-labelledby={`carousel-heading-${id}`}
+      >
+        <ul
+          className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+          style={{
+            transform: `translateX(-${current * (100 / slides.length)}%)`,
+          }}
+        >
+          {slides.map((slide, index) => (
+            <Slide
+              key={index}
+              slide={slide}
+              index={index}
+              current={current}
+              handleSlideClick={handleSlideClick}
+            />
+          ))}
+        </ul>
+
+        <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+          <CarouselControl
+            type="previous"
+            title="Go to previous slide"
+            handleClick={handlePreviousClick}
           />
-        ))}
-      </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
-        <CarouselControl
-          type="previous"
-          title="Go to previous slide"
-          handleClick={handlePreviousClick}
-        />
-
-        <CarouselControl
-          type="next"
-          title="Go to next slide"
-          handleClick={handleNextClick}
-        />
+          <CarouselControl
+            type="next"
+            title="Go to next slide"
+            handleClick={handleNextClick}
+          />
+        </div>
       </div>
     </div>
   );
