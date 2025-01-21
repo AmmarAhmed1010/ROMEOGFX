@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +6,7 @@
 
 
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Bitter", serif;
   background-color: #100213 ;
 }
 @layer base {
@@ -120,9 +120,13 @@ body {
   border-radius: 8px;
 }
 
+/* scrollbar hide */
+#list::-webkit-scrollbar{
+  display: none;
+}
 /* heading animation with a glow effect */
 .heading{
-  font-weight: 900;
+  font-weight: 700;
 text-align: center;
 background: linear-gradient(to right,red,blue);
 color: transparent;
