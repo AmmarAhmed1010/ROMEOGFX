@@ -55,7 +55,7 @@ export function BackgroundGradientDemo() {
           <BackgroundGradient
           
             key={card.id}
-            className="rounded-[22px] w-[300px] p-4 bg-black md:mx-auto"
+            className="rounded-[22px] w-[200px] p-4 bg-black md:mx-auto"
           >
             <Image
               src={card.imageSrc}
