@@ -13,7 +13,7 @@ export function BackgroundBeamsWithCollisionDemo() {
             RomeoGFX
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Transforming ideas into captivating visuals. Let's craft something extraordinary together.
+            Transforming ideas into captivating visuals. Lets craft something extraordinary together.
           </p>
         </div>
 
