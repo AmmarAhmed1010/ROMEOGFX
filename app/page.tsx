@@ -2,6 +2,7 @@ import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeamsWi
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import { CarouselDemo } from "@/components/CarouselDemo";
 import Header from "@/components/Header";
+import MyWork from "@/components/MyWork";
 import { Pricing } from "@/components/Pricing";
 import Slider from "@/components/Slider";
 import WorkNavigation from "@/components/WorkItems";
@@ -14,9 +15,8 @@ export default function Home() {
         {/* <Hero /> */}
       <div className="px-4 mt-10 md:px-16 ">
         <BackgroundBeamsWithCollisionDemo/>
-        <CarouselDemo/>
+        <MyWork/>
         <Slider/>
-        {/* <Carousel/> */}
       {/* <ColourfulTextDemo/> */}
         <WorkNavigation />
         <Pricing />
