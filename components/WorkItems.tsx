@@ -3,7 +3,6 @@ import React, { useState, useRef } from "react";
 import { FaImage, FaDesktop, FaCamera, FaFilm } from "react-icons/fa"; // Import icons
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
