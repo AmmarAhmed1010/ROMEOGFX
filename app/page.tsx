@@ -14,8 +14,8 @@ export default function Home() {
         {/* <Hero /> */}
       <div className="px-4 mt-10 md:px-16 ">
         <BackgroundBeamsWithCollisionDemo/>
-        <Slider/>
         <CarouselDemo/>
+        <Slider/>
         {/* <Carousel/> */}
       {/* <ColourfulTextDemo/> */}
         <WorkNavigation />

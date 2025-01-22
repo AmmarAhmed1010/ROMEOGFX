@@ -24,6 +24,7 @@
     "@mantine/nprogress": "^7.15.2",
     "@mantine/spotlight": "^7.15.2",
     "@mantine/tiptap": "^7.15.2",
+    "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-navigation-menu": "^1.2.3",
     "@radix-ui/react-slot": "^1.1.1",
     "@tabler/icons-react": "^3.28.1",
