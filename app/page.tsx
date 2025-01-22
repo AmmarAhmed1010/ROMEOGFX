@@ -1,6 +1,5 @@
 import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeamsWithCollisionDemo";
 import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
-import { CarouselDemo } from "@/components/CarouselDemo";
 import Header from "@/components/Header";
 import MyWork from "@/components/MyWork";
 import { Pricing } from "@/components/Pricing";

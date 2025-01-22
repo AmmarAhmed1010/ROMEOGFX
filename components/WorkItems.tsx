@@ -1,8 +1,9 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaImage, FaDesktop, FaCamera, FaFilm } from "react-icons/fa"; // Import icons
 import {
   Drawer,
+  DrawerClose,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
@@ -27,6 +28,9 @@ const navigationItems: NavigationItem[] = [
 const WorkNavigation: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedSection, setSelectedSection] = useState<NavigationItem | null>(null);
+  
+  // Create a reference to the slider instance
+  const sliderRef = useRef<Slider | null>(null);
 
   const handleNavigation = (item: NavigationItem) => {
     setSelectedSection(item);
@@ -48,17 +52,7 @@ const WorkNavigation: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true, // Enable left and right arrows
-    nextArrow: (
-      <div className="slick-arrow slick-next absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-900 p-2 text-white rounded-full cursor-pointer">
-        &gt;
-      </div>
-    ), // Custom next arrow
-    prevArrow: (
-      <div className="slick-arrow slick-prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-900 p-2 text-white rounded-full cursor-pointer">
-        &lt;
-      </div>
-    ), // Custom prev arrow
+    arrows: false, // Disable default arrows, custom ones will be added
   };
 
   return (
@@ -94,20 +88,35 @@ const WorkNavigation: React.FC = () => {
             </DrawerHeader>
 
             {/* Carousel Component */}
-            <div className="mt-4 w-full md:w-2/5 mx-auto"> {/* 40% width */}
-              <Slider {...settings}>
+            <div className="mt-4 w-full md:w-2/5 mx-auto relative">
+              <Slider ref={sliderRef} {...settings}>
                 {carouselItems.map((item, index) => (
                   <div key={index}>
                     <Image
                       src={item.src}
                       alt={item.alt}
-                      width={300} // Set the desired width
-                      height={200} // Set the desired height
-                      className="w-full h-auto object-contain rounded-lg"
+                      width={500} // Set the desired width for better quality
+                      height={300} // Set the desired height for better quality
+                      quality={100} // Set the image quality to maximum
+                      className="w-full h-auto object-cover rounded-lg"
                     />
                   </div>
                 ))}
               </Slider>
+
+              {/* Custom Left and Right Navigation Buttons */}
+              <button
+                onClick={() => sliderRef.current?.slickPrev()} // Move to the previous slide
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-900 p-2 text-white rounded-full cursor-pointer z-10"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={() => sliderRef.current?.slickNext()} // Move to the next slide
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-900 p-2 text-white rounded-full cursor-pointer z-10"
+              >
+                &gt;
+              </button>
             </div>
           </DrawerContent>
         </Drawer>
