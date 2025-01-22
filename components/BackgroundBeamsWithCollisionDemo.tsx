@@ -9,7 +9,7 @@ export function BackgroundBeamsWithCollisionDemo() {
       <BackgroundBeamsWithCollision className="min-h-screen flex flex-col items-center justify-center text-white">
         {/* Header Section */}
         <div className="text-center mb-10">
-          <h1 className="relative mx-auto inline-block bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text text-transparent text-6xl font-extrabold mb-4">
+          <h1 className="relative mx-auto inline-block text-yellow-500 text-6xl font-extrabold mb-4">
             RomeoGFX
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">

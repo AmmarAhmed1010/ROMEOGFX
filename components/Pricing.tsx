@@ -46,9 +46,13 @@ export function Pricing() {
   return (
     <div id="packages" className="my-10">
       {/* Heading */}
-      <h2 className="text-center text-3xl md:text-4xl lg:text-5xl heading">
-        Packages
-      </h2>
+      <h2 
+  className="text-5xl text-center mb-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-600 to-black drop-shadow-[0_5px_10px_rgba(255,69,0,0.8)] tracking-wide">
+  Packages
+</h2>
+
+
+
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Loop through the plans data to generate cards */}
