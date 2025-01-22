@@ -81,9 +81,9 @@ const WorkNavigation: React.FC = () => {
       {/* Drawer - Confirm Action */}
       {selectedSection && (
         <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
-          <DrawerContent>
+          <DrawerContent className="bg-black/40">
             <DrawerHeader>
-              <DrawerTitle>{`Explore ${selectedSection.title}`}</DrawerTitle>
+              <DrawerTitle className="text-purple-700">{`Explore ${selectedSection.title}`}</DrawerTitle>
             </DrawerHeader>
 
             {/* Carousel Component */}
