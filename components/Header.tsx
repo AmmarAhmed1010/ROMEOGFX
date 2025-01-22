@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import {
   Sheet,
@@ -12,6 +11,12 @@ import {
 } from "@/components/ui/sheet";
 
 const Header = () => {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsSheetOpen(false); // Close the sheet when a link is clicked
+  };
+
   return (
     <header
       className="bg-[#0b010c] bg-opacity-80 border-t-2 border-b-2 border-gray-500 text-white px-6 py-4 lg:px-8 lg:py-6 z-50 fixed w-full top-0"
@@ -85,7 +90,7 @@ const Header = () => {
 
         {/* Hamburger Icon replaced with Sheet */}
         <div className="lg:hidden flex items-center">
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger>
               <button className="text-white focus:outline-none">
                 <div className="space-y-1">
@@ -109,6 +114,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   Home
                 </Link>
@@ -118,6 +124,7 @@ const Header = () => {
                   duration={500}
                   offset={-100}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   My Work
                 </Link>
@@ -127,6 +134,7 @@ const Header = () => {
                   duration={500}
                   offset={-110}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   Featured
                 </Link>
@@ -136,6 +144,7 @@ const Header = () => {
                   duration={500}
                   offset={-80}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   Plans
                 </Link>
@@ -145,6 +154,7 @@ const Header = () => {
                   duration={500}
                   offset={-80}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   Packages
                 </Link>
@@ -154,6 +164,7 @@ const Header = () => {
                   duration={500}
                   offset={-30}
                   className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  onClick={handleLinkClick}
                 >
                   Testimonials
                 </Link>
