@@ -100,12 +100,10 @@ const Header = () => {
                 </div>
               </button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="bg-black/40">
               <SheetHeader>
-                <SheetTitle>Navigation</SheetTitle>
-                <SheetDescription>
-                  Select a section to navigate.
-                </SheetDescription>
+                <SheetTitle className="text-center text-4xl mt-10 text-purple-800">RomeoGFX</SheetTitle>
+               
               </SheetHeader>
               {/* Mobile Navigation Links */}
               <nav className="flex flex-col items-center space-y-6 text-center mt-8">
