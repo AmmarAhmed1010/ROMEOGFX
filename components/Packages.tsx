@@ -15,7 +15,7 @@ const Packages = () => {
 
   return (
    <>
-   <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Packages</h1>
+   <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Packages</h1>
    <div className='grid grid-cols-1 pb-20 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="card">

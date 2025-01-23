@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Achievements = () => {
   return (
  <>
-   <h1 id='achievements' className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Achievements</h1>
+   <h1 id='achievements' className='underline text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Achievements</h1>
    <div className='grid grid-cols-1 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="outer">

@@ -56,7 +56,7 @@ const WorkCategories: React.FC = () => {
 
   return (
   <>
-    <h1 id='mywork' className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Explore My Work</h1>
+    <h1 id='mywork' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 underline'>Explore My Work</h1>
     <section  className="flex flex-col text-white">
    
       <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
