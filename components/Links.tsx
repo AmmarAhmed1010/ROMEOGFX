@@ -82,7 +82,7 @@ const StyledWrapper = styled.div`
     height: 60px;
     width: 60px;
     border-radius: 100%;
-    color: rgb(255, 174, 0);
+    color: #30D6F3;
     fill: currentColor;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
       inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
