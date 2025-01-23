@@ -1,12 +1,13 @@
 import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
+import Btn from "./Btn";
 
 export function BackgroundBeamsWithCollisionDemo() {
   return (
     <div id="home" className="">
       {/* Background Beams */}
-      <BackgroundBeamsWithCollision className="min-h-screen flex flex-col items-center justify-center text-white">
+      <BackgroundBeamsWithCollision className="min-h-screen flex flex-col items-center justify-center text-teal-300">
         {/* Header Section */}
         <div className="text-center mb-10">
           <h1 className="relative mx-auto inline-block text-yellow-500 text-6xl font-extrabold mb-4">
@@ -19,12 +20,8 @@ export function BackgroundBeamsWithCollisionDemo() {
 
         {/* Buttons Section */}
         <div className="flex flex-wrap gap-6 justify-center mt-6">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-md">
-            View My Work
-          </button>
-          <button className="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-8 rounded-lg transition-all shadow-md">
-            Contact Me
-          </button>
+          <Btn text="Subscrive" />
+        
         </div>
 
         {/* Social Media Links */}
