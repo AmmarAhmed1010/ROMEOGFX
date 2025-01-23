@@ -4,14 +4,16 @@ import styled from 'styled-components';
 
 const Results = () => {
   return (
-   <div className='grid grid-cols-1 py-20 gap-6 md:grid-cols-3 '>
+ <>
+   <h1 className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Achievements</h1>
+   <div className='grid grid-cols-1 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="outer">
         <div className="dot" />
         <div className="card">
           <div className="ray" />
-          <div className="text">750k</div>
-          <div>Views</div>
+          <div className="text">100 Million</div>
+          <div>Generated Subscribers</div>
           <div className="line topl" />
           <div className="line leftl" />
           <div className="line bottoml" />
@@ -24,8 +26,8 @@ const Results = () => {
          <div className="dot" />
          <div className="card">
            <div className="ray" />
-           <div className="text">750k</div>
-           <div>Views</div>
+           <div className="text">1.5 Billion </div>
+           <div>Thumbnail Clicks</div>
            <div className="line topl" />
            <div className="line leftl" />
            <div className="line bottoml" />
@@ -38,8 +40,8 @@ const Results = () => {
           <div className="dot" />
           <div className="card">
             <div className="ray" />
-            <div className="text">750k</div>
-            <div>Views</div>
+            <div className="text">5 Hundred </div>
+            <div>Happy Customers</div>
             <div className="line topl" />
             <div className="line leftl" />
             <div className="line bottoml" />
@@ -48,6 +50,7 @@ const Results = () => {
         </div>
       </StyledWrapper>
    </div>
+ </>
   );
 }
 
@@ -64,7 +67,11 @@ const StyledWrapper = styled.div`
     width: 5px;
     aspect-ratio: 1;
     position: absolute;
-    background-color: #fff;
+     background-image: linear-gradient(
+      0deg,
+      hsl(189, 92%, 58%),
+      hsl(189, 99%, 26%) 100%
+    );
     box-shadow: 0 0 10px #ffffff;
     border-radius: 100px;
     z-index: 2;
@@ -100,7 +107,7 @@ const StyledWrapper = styled.div`
     border-radius: 9px;
     border: solid 1px #202222;
     background-size: 20px 20px;
-    background: radial-gradient(circle 280px at 0% 0%, #444444, #0c0d0d);
+    background: radial-gradient(circle 230px at 0% 0%, #32D9F6, #0c0d0d);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +132,7 @@ const StyledWrapper = styled.div`
 
   .card .text {
     font-weight: bolder;
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(45deg, #000000 4%, #fff, #000);
     background-clip: text;
     color: transparent;

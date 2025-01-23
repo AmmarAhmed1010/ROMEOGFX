@@ -20,8 +20,9 @@ export function BackgroundBeamsWithCollisionDemo() {
 
         {/* Buttons Section */}
         <div className="flex flex-wrap gap-6 justify-center mt-6">
-          <Btn text="Subscrive" />
-        
+          <Btn text="View My work" />
+          <Btn text="Contact" />
+
         </div>
 
         {/* Social Media Links */}

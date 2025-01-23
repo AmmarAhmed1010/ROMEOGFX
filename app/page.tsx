@@ -1,5 +1,4 @@
 import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeamsWithCollisionDemo";
-import { BackgroundGradientDemo } from "@/components/BackgroundGradientDemo";
 import Header from "@/components/Header";
 import Packages from "@/components/Packages";
 import Results from "@/components/Results";
@@ -12,14 +11,21 @@ export default function Home() {
 
         <Header/>
       <div className="px-4 md:px-16 ">
-        <BackgroundBeamsWithCollisionDemo/>
-        {/* <ImagesMoving/> */}
+        {/* hero section */}
+        <BackgroundBeamsWithCollisionDemo/> 
+        {/* images slider */}
         <Slider/>
+        {/* Fetured Projects */}
+
+
+        {/* Work categories */}
         <WorkNavigation />
+        {/* Packages */}
         <Packages/>
+        {/* Price List */}
+
+        {/* Achievements */}
         <Results/>
-        {/* <Pricing /> */}
-        <BackgroundGradientDemo />
       </div>
     </>
   );

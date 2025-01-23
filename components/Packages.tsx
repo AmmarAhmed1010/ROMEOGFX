@@ -3,14 +3,26 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Packages = () => {
+
+    const handleBuyNow = (plan: string) => {
+        const message = `Hi! I am interested in the ${plan} Plan. Could you provide me with more details?`;
+        const whatsappNumber = "1234567890"; // Replace with your WhatsApp number
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappURL = `https://wa.me/${3158552233}?text=${encodedMessage}`;
+    
+        window.open(whatsappURL, "_blank");
+      };
+
   return (
-   <div className='grid grid-cols-1 py-20 gap-6 md:grid-cols-3 '>
+   <>
+   <h1 className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Packages</h1>
+   <div className='grid grid-cols-1 pb-20 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="card">
         <div className="card__border" />
         <div className="card_title__container">
-          <span className="card_title">Keys to Success</span>
-          <p className="card_paragraph">Best way to be success in your life.</p>
+          <span className="card_title">Basic Plan</span>
+          <p className="card_paragraph">Rs: 1999</p>
         </div>
         <hr className="line" />
         <ul className="card__list">
@@ -20,7 +32,7 @@ const Packages = () => {
                 <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
               </svg>
             </span>
-            <span className="list_text">Set Clear Goals</span>
+            <span className="list_text">2 HD thumbnail</span>
           </li>
           <li className="card__list_item">
             <span className="check">
@@ -28,7 +40,7 @@ const Packages = () => {
                 <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
               </svg>
             </span>
-            <span className="list_text">Stay Organized</span>
+            <span className="list_text">1 Logo </span>
           </li>
           <li className="card__list_item">
             <span className="check">
@@ -36,7 +48,7 @@ const Packages = () => {
                 <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
               </svg>
             </span>
-            <span className="list_text">Continuous Learning</span>
+            <span className="list_text">1 Banner</span>
           </li>
           <li className="card__list_item">
             <span className="check">
@@ -44,127 +56,105 @@ const Packages = () => {
                 <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
               </svg>
             </span>
-            <span className="list_text">Time Management</span>
-          </li>
-          <li className="card__list_item">
-            <span className="check">
-              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-              </svg>
-            </span>
-            <span className="list_text">Maintain a Positive Attitude</span>
+            <span className="list_text">1 Non Animated Overlay</span>
           </li>
         </ul>
-        <button className="button">Get Your Success</button>
+        <button  onClick={() => handleBuyNow("Basic Plan")} className="button">Buy Now</button>
       </div>
     </StyledWrapper>
     <StyledWrapper className='w-full'>
-    <div className="card">
-      <div className="card__border" />
-      <div className="card_title__container">
-        <span className="card_title">Keys to Success</span>
-        <p className="card_paragraph">Best way to be success in your life.</p>
+      <div className="card">
+        <div className="card__border" />
+        <div className="card_title__container">
+          <span className="card_title">Standard Plan</span>
+          <p className="card_paragraph">Rs: 2999</p>
+        </div>
+        <hr className="line" />
+        <ul className="card__list">
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">2 HD thumbnail</span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Logo </span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Banner</span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Animated Overlay</span>
+          </li>
+        </ul>
+        <button  onClick={() => handleBuyNow("Standard Plan")} className="button">Buy Now</button>
       </div>
-      <hr className="line" />
-      <ul className="card__list">
-        <li className="card__list_item">
-          <span className="check">
-            <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-            </svg>
-          </span>
-          <span className="list_text">Set Clear Goals</span>
-        </li>
-        <li className="card__list_item">
-          <span className="check">
-            <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-            </svg>
-          </span>
-          <span className="list_text">Stay Organized</span>
-        </li>
-        <li className="card__list_item">
-          <span className="check">
-            <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-            </svg>
-          </span>
-          <span className="list_text">Continuous Learning</span>
-        </li>
-        <li className="card__list_item">
-          <span className="check">
-            <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-            </svg>
-          </span>
-          <span className="list_text">Time Management</span>
-        </li>
-        <li className="card__list_item">
-          <span className="check">
-            <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-            </svg>
-          </span>
-          <span className="list_text">Maintain a Positive Attitude</span>
-        </li>
-      </ul>
-      <button className="button">Get Your Success</button>
-    </div>
-  </StyledWrapper>
-  <StyledWrapper className='w-full'>
-  <div className="card w-full">
-    <div className="card__border" />
-    <div className="card_title__container">
-      <span className="card_title">Keys to Success</span>
-      <p className="card_paragraph">Best way to be success in your life.</p>
-    </div>
-    <hr className="line" />
-    <ul className="card__list">
-      <li className="card__list_item">
-        <span className="check">
-          <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="list_text">Set Clear Goals</span>
-      </li>
-      <li className="card__list_item">
-        <span className="check">
-          <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="list_text">Stay Organized</span>
-      </li>
-      <li className="card__list_item">
-        <span className="check">
-          <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="list_text">Continuous Learning</span>
-      </li>
-      <li className="card__list_item">
-        <span className="check">
-          <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="list_text">Time Management</span>
-      </li>
-      <li className="card__list_item">
-        <span className="check">
-          <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-            <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="list_text">Maintain a Positive Attitude</span>
-      </li>
-    </ul>
-    <button className="button">Get Your Success</button>
-  </div>
-</StyledWrapper>
+    </StyledWrapper>
+    <StyledWrapper className='w-full'>
+      <div className="card">
+        <div className="card__border" />
+        <div className="card_title__container">
+          <span className="card_title">Premium Plan</span>
+          <p className="card_paragraph">Rs: 3599</p>
+        </div>
+        <hr className="line" />
+        <ul className="card__list">
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">4 HD thumbnail</span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Logo </span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Banner</span>
+          </li>
+          <li className="card__list_item">
+            <span className="check">
+              <svg className="check_svg" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
+              </svg>
+            </span>
+            <span className="list_text">1 Animated Overlay</span>
+          </li>
+        </ul>
+        <button  onClick={() => handleBuyNow("Premium Plan")} className="button">Buy Now</button>
+      </div>
+    </StyledWrapper>
+  
    </div>
+   </>
   );
 }
 
