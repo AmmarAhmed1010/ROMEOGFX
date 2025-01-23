@@ -1,31 +1,28 @@
 import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeamsWithCollisionDemo";
 import Header from "@/components/Header";
 import Packages from "@/components/Packages";
-import Results from "@/components/Results";
 import Slider from "@/components/Slider";
-import WorkNavigation from "@/components/WorkItems";
+import Achievements from "@/components/Achievements";
+import WorkCategories from "@/components/WorkCategories";
 
 export default function Home() {
   return (
     <>
-
-        <Header/>
+      <Header />
       <div className="px-4 md:px-16 ">
         {/* hero section */}
-        <BackgroundBeamsWithCollisionDemo/> 
+        <BackgroundBeamsWithCollisionDemo />
         {/* images slider */}
-        <Slider/>
+        <Slider />
         {/* Fetured Projects */}
 
-
         {/* Work categories */}
-        <WorkNavigation />
-        {/* Packages */}
-        <Packages/>
-        {/* Price List */}
-
+        <WorkCategories />
         {/* Achievements */}
-        <Results/>
+        <Achievements />
+        {/* Packages */}
+        <Packages />
+        {/* Price List */}
       </div>
     </>
   );

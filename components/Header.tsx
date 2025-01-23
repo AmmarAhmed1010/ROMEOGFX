@@ -37,7 +37,7 @@ const Header = () => {
             to="home"
             smooth={true}
             duration={500}
-            className="cursor-pointer hover:text-red-500"
+            className="cursor-pointer hover:text-[#30D6F3]"
           >
             Home
           </Link>
@@ -45,45 +45,28 @@ const Header = () => {
             to="mywork"
             smooth={true}
             duration={500}
-            offset={-80}
-            className="cursor-pointer hover:text-red-500"
+            offset={-100}
+            className="cursor-pointer hover:text-[#30D6F3]"
           >
             My Work
           </Link>
           <Link
-            to="featured"
+            to="achievements"
             smooth={true}
             duration={500}
             offset={-100}
-            className="cursor-pointer hover:text-red-500"
+            className="cursor-pointer hover:text-[#30D6F3]"
           >
-            Featured
-          </Link>
-          <Link
-            to="testimonials"
-            smooth={true}
-            duration={500}
-            className="cursor-pointer hover:text-red-500"
-          >
-            Testimonials
+            Achievements
           </Link>
           <Link
             to="packages"
             smooth={true}
-            offset={-100}
             duration={500}
-            className="cursor-pointer hover:text-red-500"
+            offset={-100}
+            className="cursor-pointer hover:text-[#30D6F3]"
           >
             Packages
-          </Link>
-          <Link
-            to="plans"
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="cursor-pointer hover:text-red-500"
-          >
-            Plans
           </Link>
         </nav>
 
@@ -101,16 +84,17 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent className="bg-black/40">
               <SheetHeader>
-                <SheetTitle className="text-center text-4xl mt-10 text-purple-800">RomeoGFX</SheetTitle>
+                <SheetTitle className="text-start text-4xl mt-10 text-white flex"><h1>Romeo</h1>
+                <span className="text-[#30D6F3]">Gfx</span></SheetTitle>
                
               </SheetHeader>
               {/* Mobile Navigation Links */}
-              <nav className="flex flex-col items-center space-y-6 text-center mt-8">
+              <nav className="flex flex-col space-y-10 text-start mt-8">
                 <Link
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Home
@@ -119,52 +103,33 @@ const Header = () => {
                   to="mywork"
                   smooth={true}
                   duration={500}
-                  offset={-100}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   My Work
                 </Link>
                 <Link
-                  to="featured"
-                  smooth={true}
-                  duration={500}
-                  offset={-110}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
-                  onClick={handleLinkClick}
-                >
-                  Featured
-                </Link>
-                <Link
-                  to="plans"
+                  to="achievements"
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
-                  Plans
+                  Achievements
                 </Link>
                 <Link
                   to="packages"
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Packages
                 </Link>
-                <Link
-                  to="testimonials"
-                  smooth={true}
-                  duration={500}
-                  offset={-30}
-                  className="text-2xl font-semibold text-yellow-400 hover:text-red-500 cursor-pointer"
-                  onClick={handleLinkClick}
-                >
-                  Testimonials
-                </Link>
+              
               </nav>
             </SheetContent>
           </Sheet>

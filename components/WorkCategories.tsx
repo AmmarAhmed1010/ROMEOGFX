@@ -24,7 +24,7 @@ const navigationItems: NavigationItem[] = [
   { id: 4, title: "Overlays", route: "/overlays", icon: <FaFilm /> },
 ];
 
-const WorkNavigation: React.FC = () => {
+const WorkCategories: React.FC = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedSection, setSelectedSection] = useState<NavigationItem | null>(null);
   
@@ -55,10 +55,10 @@ const WorkNavigation: React.FC = () => {
   };
 
   return (
-    <section id="mywork" className="flex flex-col text-white">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl heading">
-        Explore My Creative Work
-      </h2>
+  <>
+    <h1 id='mywork' className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Explore My Work</h1>
+    <section  className="flex flex-col text-white">
+   
       <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {navigationItems.map((item) => (
           <div
@@ -121,7 +121,8 @@ const WorkNavigation: React.FC = () => {
         </Drawer>
       )}
     </section>
+  </>
   );
 };
 
-export default WorkNavigation;
+export default WorkCategories;

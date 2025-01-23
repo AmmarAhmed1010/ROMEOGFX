@@ -6,16 +6,16 @@ const Packages = () => {
 
     const handleBuyNow = (plan: string) => {
         const message = `Hi! I am interested in the ${plan} Plan. Could you provide me with more details?`;
-        const whatsappNumber = "1234567890"; // Replace with your WhatsApp number
+        const whatsappNumber = "3158552233"; // Replace with your WhatsApp number
         const encodedMessage = encodeURIComponent(message);
-        const whatsappURL = `https://wa.me/${3158552233}?text=${encodedMessage}`;
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
         window.open(whatsappURL, "_blank");
       };
 
   return (
    <>
-   <h1 className='text- text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Packages</h1>
+   <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Packages</h1>
    <div className='grid grid-cols-1 pb-20 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="card">
