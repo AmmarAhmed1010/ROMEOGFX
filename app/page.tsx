@@ -4,6 +4,8 @@ import Packages from "@/components/Packages";
 import Slider from "@/components/Slider";
 import Achievements from "@/components/Achievements";
 import WorkCategories from "@/components/WorkCategories";
+import { Featured } from "@/components/Featured";
+import { PricingList } from "@/components/PricingList";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
         {/* images slider */}
         <Slider />
         {/* Fetured Projects */}
-
+        <Featured/>
         {/* Work categories */}
         <WorkCategories />
         {/* Achievements */}
@@ -23,6 +25,7 @@ export default function Home() {
         {/* Packages */}
         <Packages />
         {/* Price List */}
+        <PricingList/>
       </div>
     </>
   );
