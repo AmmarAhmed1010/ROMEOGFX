@@ -2,6 +2,7 @@ import React from "react";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
 import Btn from "./Btn";
+import Links from "./Links";
 
 export function BackgroundBeamsWithCollisionDemo() {
   return (
@@ -27,21 +28,7 @@ export function BackgroundBeamsWithCollisionDemo() {
 
         {/* Social Media Links */}
         <div className="mt-12 flex justify-center gap-8 text-2xl text-gray-400">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-            <FaFacebook />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-            <FaTwitter />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
-            <FaInstagram />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700">
-            <FaLinkedin />
-          </a>
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
-            <FaBehance />
-          </a>
+         <Links/>
         </div>
 
         {/* Footer Section */}
