@@ -1,7 +1,7 @@
 
 "use client";
 
-import { List, Avatar } from "flowbite-react";
+import { List } from "flowbite-react";
 
 export function PricingList() {
   return (
