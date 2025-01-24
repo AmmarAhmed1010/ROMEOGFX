@@ -18,6 +18,7 @@ export function Featured() {
             src="/thumbnail/thumbnail (1).jpg" 
             alt="Thumbnail 1" 
             layout="intrinsic" 
+            className="rounded-3xl"
             width={800} 
             height={450} // Adjust to match your image's aspect ratio
           />
@@ -27,13 +28,15 @@ export function Featured() {
             layout="intrinsic" 
             width={800} 
             height={450} 
+              className="rounded-3xl"
           />
           <Image 
             src="/thumbnail/thumbnail (3).jpg" 
             alt="Thumbnail 3" 
             layout="intrinsic" 
             width={800} 
-            height={450} 
+            height={450}
+              className="rounded-3xl"
           />
           <Image 
             src="/thumbnail/thumbnail (4).jpg" 
@@ -41,6 +44,7 @@ export function Featured() {
             layout="intrinsic" 
             width={800} 
             height={450} 
+              className="rounded-3xl"
           />
           <Image 
             src="/thumbnail/thumbnail (5).jpg" 
@@ -48,6 +52,7 @@ export function Featured() {
             layout="intrinsic" 
             width={800} 
             height={450} 
+              className="rounded-3xl"
           />
         </Carousel>
       </div>

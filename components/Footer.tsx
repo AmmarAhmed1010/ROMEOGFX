@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 border-b-2 border-red-600 inline-block">
+            <h3 className="text-xl font-semibold mb-4 border-b-2 border-[#30D6F3] inline-block">
               Contact Us
             </h3>
             <p className="mb-2 text-gray-300">Email: example@example.com</p>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 border-b-2 border-red-600 inline-block">
+            <h3 className="text-xl font-semibold mb-4 border-b-2 border-[#30D6F3] inline-block">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                 <li key={index}>
                   <a
                     href={item.link}
-                    className="text-gray-300 hover:text-red-500 transition"
+                    className="text-gray-300 hover:text-[#30D6F3]  transition"
                   >
                     {item.name}
                   </a>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 
           {/* Social Media */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-4 border-b-2 border-red-600 inline-block">
+            <h3 className="text-xl font-semibold mb-4 border-b-2 border-[#30D6F3]  inline-block">
               Follow Us
             </h3>
             <div className="flex justify-center md:justify-start space-x-6 mt-4">

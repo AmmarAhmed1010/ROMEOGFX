@@ -19,7 +19,7 @@ export default function Home() {
         {/* images slider */}
         <Slider />
         {/* Fetured Projects */}
-        <FeaturedThumbnailSection />
+        {/* <FeaturedThumbnailSection /> */}
        <Featured/>
         {/* Work categories */}
         <WorkCategories />
