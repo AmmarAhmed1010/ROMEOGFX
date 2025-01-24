@@ -1,11 +1,29 @@
 "use client"
 import React from 'react';
 import styled from 'styled-components';
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
-const Packages = () => {
+const Plans = () => {
+
+
+   useEffect(() => {
+      AOS.init({
+        offset: 120,        // Offset (in px) from the original trigger point
+        delay: 0,           // Delay (in ms) between element and animation start
+        duration: 1000,     // Duration (in ms) of the animation
+        easing: "ease-in-out", // Easing function
+        once: false,         // Whether animation should happen only once
+        mirror: false,      // Whether elements should animate out while scrolling past
+      });
+      
+    }, []);
+  
+
 
     const handleBuyNow = (plan: string) => {
-        const message = `Hi! I am interested in the ${plan} Plan. Could you provide me with more details?`;
+        const message = `Hi! I am interested in the ${plan}. Could you provide me with more details?`;
         const whatsappNumber = "3158552233"; // Replace with your WhatsApp number
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -15,9 +33,9 @@ const Packages = () => {
 
   return (
    <>
-   <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Plans</h1>
+   <h1 id='plans' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Plans</h1>
    <div className='grid grid-cols-1  gap-6 md:grid-cols-3 '>
-     <StyledWrapper className='w-full'>
+     <StyledWrapper data-aos="fade-up-right" className='w-full'>
       <div className="card">
         <div className="card__border" />
         <div className="card_title__container">
@@ -62,8 +80,8 @@ const Packages = () => {
         <button  onClick={() => handleBuyNow("Basic Plan")} className="button">Buy Now</button>
       </div>
     </StyledWrapper>
-    <StyledWrapper className='w-full'>
-      <div className="card">
+    <StyledWrapper data-aos="fade-up-right" className='w-full'>
+      <div  className="card">
         <div className="card__border" />
         <div className="card_title__container">
           <span className="card_title">Standard Plan</span>
@@ -107,8 +125,8 @@ const Packages = () => {
         <button  onClick={() => handleBuyNow("Standard Plan")} className="button">Buy Now</button>
       </div>
     </StyledWrapper>
-    <StyledWrapper className='w-full'>
-      <div className="card">
+    <StyledWrapper data-aos="fade-up-right" className='w-full'>
+      <div  className="card">
         <div className="card__border" />
         <div className="card_title__container">
           <span className="card_title">Premium Plan</span>
@@ -317,4 +335,4 @@ const StyledWrapper = styled.div`
     box-shadow: inset 0 -2px 25px -4px var(--white);
   }`;
 
-export default Packages;
+export default Plans;

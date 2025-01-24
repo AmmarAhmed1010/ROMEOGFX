@@ -1,14 +1,30 @@
 "use client"
 import React from 'react';
 import styled from 'styled-components';
-
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 const Achievements = () => {
+
+  useEffect(() => {
+    AOS.init({
+      offset: 120,        // Offset (in px) from the original trigger point
+      delay: 0,           // Delay (in ms) between element and animation start
+      duration: 1000,     // Duration (in ms) of the animation
+      easing: "ease-in-out", // Easing function
+      once: false,         // Whether animation should happen only once
+      mirror: false,      // Whether elements should animate out while scrolling past
+    });
+    
+  }, []);
+
+
   return (
  <>
    <h1 id='achievements' className='underline text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 '>Achievements</h1>
    <div className='grid grid-cols-1 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
-      <div className="outer">
+      <div  data-aos="fade-up-right" className="outer">
         <div className="dot" />
         <div className="card">
           <div className="ray" />
@@ -22,7 +38,7 @@ const Achievements = () => {
       </div>
     </StyledWrapper>
        <StyledWrapper className='w-full'>
-       <div className="outer">
+       <div data-aos="fade-up-right" className="outer">
          <div className="dot" />
          <div className="card">
            <div className="ray" />
@@ -36,7 +52,7 @@ const Achievements = () => {
        </div>
      </StyledWrapper>
         <StyledWrapper className='w-full'>
-        <div className="outer">
+        <div data-aos="fade-up-right" className="outer">
           <div className="dot" />
           <div className="card">
             <div className="ray" />

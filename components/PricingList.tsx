@@ -4,9 +4,11 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 const PricingList = () => {
+
+  
   return (
     <>
-     <h1 id='list' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
+     <h1 id='priceList' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
      <div className='grid grid-cols-2 gap-4 md:grid-cols-4 '>
      <StyledWrapper>
   <div className="card">

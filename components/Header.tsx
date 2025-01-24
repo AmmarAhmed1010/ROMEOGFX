@@ -44,6 +44,15 @@ const Header = () => {
             Home
           </Link>
           <Link
+            to="featured"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            className="cursor-pointer hover:text-[#30D6F3]"
+          >
+            Featured
+          </Link>
+          <Link
             to="mywork"
             smooth={true}
             duration={500}
@@ -62,22 +71,22 @@ const Header = () => {
             Achievements
           </Link>
           <Link
-            to="packages"
+            to="priceList"
             smooth={true}
             duration={500}
             offset={-100}
             className="cursor-pointer hover:text-[#30D6F3]"
           >
-            Packages
+            Price List
           </Link>
           <Link
-            to="featured"
+            to="plans"
             smooth={true}
             duration={500}
             offset={-100}
             className="cursor-pointer hover:text-[#30D6F3]"
           >
-            Featured
+            Plans
           </Link>
         </nav>
 
@@ -111,6 +120,16 @@ const Header = () => {
                   Home
                 </Link>
                 <Link
+                  to="featured"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Featured
+                </Link>
+                <Link
                   to="mywork"
                   smooth={true}
                   duration={500}
@@ -131,14 +150,24 @@ const Header = () => {
                   Achievements
                 </Link>
                 <Link
-                  to="packages"
+                  to="priceList"
                   smooth={true}
                   duration={500}
                   offset={-80}
                   className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
-                  Packages
+                  Price List
+                </Link>
+                <Link
+                  to="plans"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Plans
                 </Link>
               
               </nav>

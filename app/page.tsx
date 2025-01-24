@@ -1,10 +1,8 @@
 import Header from "@/components/Header";
-import Packages from "@/components/Packages";
 import Slider from "@/components/Slider";
 import Achievements from "@/components/Achievements";
-import WorkCategories from "@/components/WorkCategories";
 import HeroSection from "@/components/HeroSection";
-import PricingList from "@/components/PricingList";
+import Plans from "@/components/Plans";
 
 
 export default function Home() {
@@ -14,18 +12,20 @@ export default function Home() {
       <div className="px-4 md:px-16 ">
         {/* hero section */}
         <HeroSection/>
-        {/* images slider */}
-        <Slider />
         {/* Featured */}
-       {/* <Featured/> */}
+        <Slider />
         {/* Work categories */}
-        <WorkCategories />
+
+
+        {/* <WorkCategories /> */}
         {/* Achievements */}
         <Achievements />
           {/* Price List */}
-          <PricingList/>
-        {/* Packages */}
-        <Packages />
+
+
+          {/* <PricingList/> */}
+        {/* Plans */}
+       <Plans/>
       
       </div>
     </>
