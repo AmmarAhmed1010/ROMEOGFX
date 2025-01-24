@@ -7,7 +7,7 @@ const PricingList = () => {
   return (
     <>
      <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
-     <div className='grid grid-cols-2 gap-6 md:grid-cols-4 '>
+     <div className='grid grid-cols-2 gap-4 md:grid-cols-4 '>
      <StyledWrapper>
   <div className="card">
     <div className="card__content text-center">
@@ -20,7 +20,7 @@ const PricingList = () => {
                      className="object-contain  rounded-xl"
                    />
         <h1 className="text-[#30D6F3]">Thumbnail</h1>
-        <p className='text-white text-xs'>Thumbnails for your videos.</p>
+        <p className='text-white text-xs font-extralight'>Thumbnails for your videos.</p>
         <h1 className="text-red-700 mb-2">Rs: 300</h1>          
       </div>
     </div>
@@ -38,7 +38,7 @@ const PricingList = () => {
                      className="object-contain rounded-xl"
                    />
         <h1 className="text-[#30D6F3]">Thumbnail</h1>
-        <p className='text-white text-xs'>Thumbnails for your videos.</p>
+        <p className='text-white text-xs font-extralight'>Thumbnails for your videos.</p>
         <h1 className="text-red-700 mb-2">Rs: 300</h1>          
       </div>
     </div>
@@ -56,7 +56,7 @@ const PricingList = () => {
                      className="object-contain  rounded-xl"
                    />
         <h1 className="text-[#30D6F3]">Thumbnail</h1>
-        <p className='text-white text-xs'>Thumbnails for your videos.</p>
+        <p className='text-white text-xs font-extralight'>Thumbnails for your videos.</p>
         <h1 className="text-red-700 mb-2">Rs: 300</h1>          
       </div>
     </div>
@@ -74,7 +74,7 @@ const PricingList = () => {
                      className="object-contain rounded-xl"
                    />
         <h1 className="text-[#30D6F3]">Thumbnail</h1>
-        <p className='text-white text-xs'>Thumbnails for your videos.</p>
+        <p className='text-white text-xs font-extralight'>Thumbnails for your videos.</p>
         <h1 className="text-red-700 mb-2">Rs: 300</h1>          
       </div>
     </div>
