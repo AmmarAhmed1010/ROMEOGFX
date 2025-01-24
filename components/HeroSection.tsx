@@ -14,6 +14,7 @@ const HeroSection: React.FC = () => {
           width={500}
           height={500}
           className="w-full rounded-lg object-cover shadow-lg"
+          priority
         />
       </div>
 

@@ -18,6 +18,7 @@ const PricingList = () => {
                      height="300"
                      width="300"
                      className="object-contain  rounded-xl"
+                     priority
                    />
         <h1 className="text-[#30D6F3]">Thumbnail</h1>
         <p className='text-white text-xs font-extralight'>Thumbnails for your videos.</p>

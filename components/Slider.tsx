@@ -35,6 +35,7 @@ const SliderList: React.FC<SliderProps> = ({ quantity, width, height, reverse })
               height="400"
               width="400"
               className="object-contain rounded-3xl"
+              priority
             />
           </div>
         ))}
