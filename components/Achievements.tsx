@@ -8,11 +8,10 @@ const Achievements = () => {
 
   useEffect(() => {
     AOS.init({
-      offset: 50,        // Offset (in px) from the original trigger point
+                     // Offset (in px) from the original trigger point
       delay: 0,           // Delay (in ms) between element and animation start
-      duration: 1000,     // Duration (in ms) of the animation
+      duration: 600,     // Duration (in ms) of the animation
       easing: "ease-in-out", // Easing function
-      once: false,         // Whether animation should happen only once
       mirror: false,      // Whether elements should animate out while scrolling past
     });
     
