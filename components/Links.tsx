@@ -94,7 +94,7 @@ const StyledWrapper = styled.div`
     padding: 5px;
     transition: all 0.3s;
     color: rgb(255, 174, 0);
-    background-color: rgba(255, 255, 255, 0.3);
+    color: #30D6F3;
     position: absolute;
     z-index: 9999;
     box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),

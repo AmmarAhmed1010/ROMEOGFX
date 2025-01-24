@@ -25,8 +25,10 @@ const Header = () => {
         <div>
           <Link href="/" to="home">
             <div className="text-2xl flex font-serif font-bold md:text-3xl cursor-pointer">
+              
               <h1>Romeo</h1>
               <span className="text-[#30D6F3]">Gfx</span>
+
             </div>
           </Link>
         </div>

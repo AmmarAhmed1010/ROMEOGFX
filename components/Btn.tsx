@@ -24,12 +24,12 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
     background: linear-gradient(
       to right,
-      #77530a,
-      #ffd277,
-      #77530a,
-      #77530a,
-      #ffd277,
-      #77530a
+      #30d6f374,
+      #30D6F3,
+      #30d6f374,
+      #30d6f374,
+      #30D6F3,
+      #30d6f374
     );
     background-size: 250%;
     background-position: left;
@@ -45,7 +45,7 @@ const StyledWrapper = styled.div`
 
   .Btn span {
     z-index: 1; /* Ensures the text stays above the ::before pseudo-element */
-    color: #ffd277; /* Explicit text color for visibility */
+    color: white; /* Explicit text color for visibility */
   }
 
   .Btn::before {
