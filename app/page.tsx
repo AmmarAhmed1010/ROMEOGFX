@@ -3,7 +3,6 @@ import Packages from "@/components/Packages";
 import Slider from "@/components/Slider";
 import Achievements from "@/components/Achievements";
 import WorkCategories from "@/components/WorkCategories";
-import { Featured } from "@/components/Featured";
 import HeroSection from "@/components/HeroSection";
 import PricingList from "@/components/PricingList";
 
