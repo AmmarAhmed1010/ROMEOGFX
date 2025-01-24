@@ -14,13 +14,10 @@ export default function Home() {
       <div className="px-4 md:px-16 ">
         {/* hero section */}
         <HeroSection/>
-        {/* <BackgroundBeamsWithCollisionDemo /> */}
         {/* images slider */}
         <Slider />
         {/* Fetured Projects */}
-       <div>
        <Featured/>
-       </div>
         {/* Work categories */}
         <WorkCategories />
         {/* Achievements */}
