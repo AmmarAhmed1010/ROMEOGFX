@@ -23,10 +23,11 @@ export default function Home() {
         <WorkCategories />
         {/* Achievements */}
         <Achievements />
+          {/* Price List */}
+          <PricingList/>
         {/* Packages */}
         <Packages />
-        {/* Price List */}
-        <PricingList/>
+      
       </div>
     </>
   );
