@@ -5,7 +5,7 @@ import Btn from "./Btn";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="hero min-h-screen bg-black text-white flex flex-col lg:flex-row items-center  justify-center p-6 lg:p-16">
+    <section id="home" className="hero min-h-screen bg-black text-white flex flex-col lg:flex-row items-center  justify-center p-6 lg:p-16">
       {/* Left Content: Image */}
       <div className="hero-image w-full mt-10 lg:w-1/2 mb-6 lg:mb-0">
         <Image

@@ -73,7 +73,7 @@ const WorkCategories: React.FC = () => {
             </div>
 
             {/* Hover Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent group-hover:from-red-700 group-hover:to-blue-700 opacity-50 transition-all duration-500 rounded-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent group-hover:from-[#30d6f374] group-hover:to-[#30D6F3] opacity-50 transition-all duration-500 rounded-xl"></div>
           </div>
         ))}
       </div>

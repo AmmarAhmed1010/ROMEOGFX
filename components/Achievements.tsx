@@ -56,7 +56,7 @@ const Achievements = () => {
 
 const StyledWrapper = styled.div`
   .outer {
-    height: 250px;
+    height: 220px;
     border-radius: 10px;
     padding: 1px;
     background: radial-gradient(circle 230px at 0% 0%, #ffffff, #0c0d0d);

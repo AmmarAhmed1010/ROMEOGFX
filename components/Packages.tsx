@@ -16,7 +16,7 @@ const Packages = () => {
   return (
    <>
    <h1 id='packages' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Packages</h1>
-   <div className='grid grid-cols-1 pb-20 gap-6 md:grid-cols-3 '>
+   <div className='grid grid-cols-1  gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div className="card">
         <div className="card__border" />
@@ -242,7 +242,7 @@ const StyledWrapper = styled.div`
   }
 
   .card .card_title__container .card_title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--white);
   }
 
@@ -250,7 +250,7 @@ const StyledWrapper = styled.div`
     margin-top: 0.25rem;
     width: 65%;
 
-    font-size: 0.5rem;
+    font-size: 1rem;
     color: var(--paragraph);
   }
 
