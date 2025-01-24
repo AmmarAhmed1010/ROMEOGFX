@@ -6,7 +6,6 @@ import WorkCategories from "@/components/WorkCategories";
 import { Featured } from "@/components/Featured";
 import HeroSection from "@/components/HeroSection";
 import PricingList from "@/components/PricingList";
-import FeaturedThumbnailSection from "@/components/FeaturedThumbnailSection";
 
 
 export default function Home() {
@@ -18,8 +17,7 @@ export default function Home() {
         <HeroSection/>
         {/* images slider */}
         <Slider />
-        {/* Fetured Projects */}
-        {/* <FeaturedThumbnailSection /> */}
+        {/* Featured */}
        <Featured/>
         {/* Work categories */}
         <WorkCategories />
