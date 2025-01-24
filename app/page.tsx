@@ -18,7 +18,7 @@ export default function Home() {
         {/* images slider */}
         <Slider />
         {/* Featured */}
-       <Featured/>
+       {/* <Featured/> */}
         {/* Work categories */}
         <WorkCategories />
         {/* Achievements */}

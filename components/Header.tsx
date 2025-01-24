@@ -70,6 +70,15 @@ const Header = () => {
           >
             Packages
           </Link>
+          <Link
+            to="featured"
+            smooth={true}
+            duration={500}
+            offset={-100}
+            className="cursor-pointer hover:text-[#30D6F3]"
+          >
+            Featured
+          </Link>
         </nav>
 
         {/* Hamburger Icon replaced with Sheet */}
