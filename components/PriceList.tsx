@@ -7,18 +7,10 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 const PriceList: React.FC = () => {
-  const items = [
-    { name: 'Thumbnail', price: 300, description: 'Custom YouTube thumbnails' },
-    { name: 'Logo', price: 500, description: 'Unique logo designs' },
-    { name: 'Banner', price: 500, description: 'Eye-catching banners' },
-    { name: 'Overlay', price: 500, description: 'Stream overlay designs' },
-    { name: 'Posters', price: 500, description: 'Creative poster designs' },
-    { name: 'FB Banner', price: 500, description: 'Facebook banner designs' },
-    { name: 'Intro', price: 500, description: 'Dynamic video intros' },
-    { name: 'Outro', price: 500, description: 'Engaging video outros' },
-    { name: 'Jersey Shirts', price: 500, description: 'Custom jersey designs' },
-  ];
-
+   useEffect(() => {
+     AOS.init({ duration: 1000,  offset: 50 });
+     
+ }, []);
   return (
    <>
    <h1 id='priceList' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
