@@ -5,17 +5,10 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
 const Achievements = () => {
-
   useEffect(() => {
-    AOS.init({
-                     // Offset (in px) from the original trigger point
-      delay: 0,           // Delay (in ms) between element and animation start
-      duration: 600,     // Duration (in ms) of the animation
-      easing: "ease-in-out", // Easing function
-      mirror: false,      // Whether elements should animate out while scrolling past
-    });
+    AOS.init({ duration: 1000,  offset: 50 });
     
-  }, []);
+}, []);
 
 
   return (

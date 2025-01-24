@@ -8,17 +8,10 @@ import { useEffect } from "react";
 const Plans = () => {
 
 
-   useEffect(() => {
-      AOS.init({
-        // offset: 120,        // Offset (in px) from the original trigger point
-        delay: 0,           // Delay (in ms) between element and animation start
-        duration: 1000,     // Duration (in ms) of the animation
-        easing: "ease-in-out", // Easing function
-        // once: false,        // Whether animation should happen only once
-        mirror: false,      // Whether elements should animate out while scrolling past
-      });
-      
-    }, []);
+  useEffect(() => {
+    AOS.init({ duration: 1000,  offset: 50 });
+    
+}, []);
   
 
 
