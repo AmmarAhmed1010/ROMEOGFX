@@ -13,7 +13,7 @@ const PriceList: React.FC = () => {
  }, []);
   return (
    <>
-   <h1 id='priceList' className='text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
+   <h1 id='priceList' className='text-[hsl(189,92%,58%)] text-3xl font md:text-5xl mb-6 underline font-semibold mt-10 '>Price List</h1>
    <div className='grid grid-cols-1  gap-6 md:grid-cols-3 '>
   <StyledWrapper  data-aos="fade-up-right" className='w-full'>
     <div className="card">

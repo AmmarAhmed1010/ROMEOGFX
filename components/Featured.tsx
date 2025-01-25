@@ -8,7 +8,7 @@ export function Featured() {
     <>
       <h1
         id="featured"
-        className="text-[hsl(189,92%,58%)] text-3xl md:text-5xl mb-6 font-semibold mt-10 underline"
+        className="text-[hsl(189,92%,58%)] font text-3xl md:text-5xl mb-6 font-semibold mt-10 underline"
       >
         Featured Thumbnails
       </h1>
