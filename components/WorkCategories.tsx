@@ -11,7 +11,7 @@ const categories = [
   { name: "Logo", images: Array.from({ length: 20 }, (_, i) => `/images/logo/logo-${i + 1}.jpg`) },
 ];
 
-const Portfolio: React.FC = () => {
+const WorkCategories: React.FC = () => {
 
   useEffect(() => {
     AOS.init({ duration: 1000, offset: 50 });
@@ -232,4 +232,4 @@ const StyledCategoryWrapper = styled.div`
   }
 `;
 
-export default Portfolio;
+export default WorkCategories;
