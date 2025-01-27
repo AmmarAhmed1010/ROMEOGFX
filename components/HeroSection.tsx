@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import Links from "./Links";
+import Btn from "./Btn";
 
 const HeroSection: React.FC = () => {
   return (
@@ -33,11 +35,13 @@ const HeroSection: React.FC = () => {
 
         {/* Social Media Handles */}
         <div className="social-media flex items-center justify-center md:justify-start w-full space-x-4 mb-6">
+          <Links />
         </div>
 
         {/* Buttons */}
         <div className="buttons flex space-x-4">
-         
+          <Btn text="View My work" />
+          <Btn text="Contact" />{" "}
         </div>
       </div>
     </section>

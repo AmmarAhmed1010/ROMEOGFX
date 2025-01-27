@@ -1,19 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setIsMenuOpen(false); // Close the menu when a link is clicked
-  };
-
-  const menuVariants = {
-    hidden: { opacity: 0, x: "100%" },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, x: "100%", transition: { duration: 0.3 } },
+    setIsSheetOpen(false); // Close the sheet when a link is clicked
   };
 
   return (
@@ -25,8 +25,10 @@ const Header = () => {
         <div>
           <Link href="/" to="home">
             <div className="text-2xl flex font-serif font-bold md:text-3xl cursor-pointer">
+              
               <h1>Romeo</h1>
               <span className="text-[#30D6F3]">Gfx</span>
+
             </div>
           </Link>
         </div>
@@ -88,99 +90,89 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Hamburger Menu for Mobile */}
+        {/* Hamburger Icon replaced with Sheet */}
         <div className="lg:hidden flex items-center">
-          <button
-            className="text-white focus:outline-none"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <div className="space-y-1">
-              <div className="h-1 w-6 bg-white"></div>
-              <div className="h-1 w-6 bg-white"></div>
-              <div className="h-1 w-6 bg-white"></div>
-            </div>
-          </button>
-
-          {/* Animated Mobile Navigation */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                className="fixed inset-0 bg-black/80 z-50 flex flex-col items-center justify-center"
-                variants={menuVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              >
-                <button
-                  className="absolute top-5 right-5 text-white text-3xl"
-                  onClick={() => setIsMenuOpen(false)}
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+            <SheetTrigger>
+              <button className="text-white focus:outline-none">
+                <div className="space-y-1">
+                  <div className="h-1 w-6 bg-white"></div>
+                  <div className="h-1 w-6 bg-white"></div>
+                  <div className="h-1 w-6 bg-white"></div>
+                </div>
+              </button>
+            </SheetTrigger>
+            <SheetContent className="bg-black/40">
+              <SheetHeader>
+                <SheetTitle className="text-start text-4xl mt-10 text-white flex"><h1>Romeo</h1>
+                <span className="text-[#30D6F3]">Gfx</span></SheetTitle>
+               
+              </SheetHeader>
+              {/* Mobile Navigation Links */}
+              <nav className="flex flex-col space-y-10 text-start mt-8">
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
                 >
-                  &times;
-                </button>
-                <nav className="flex flex-col space-y-10 text-center">
-                  <Link
-                    to="home"
-                    smooth={true}
-                    duration={500}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="featured"
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    Featured
-                  </Link>
-                  <Link
-                    to="mywork"
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    My Work
-                  </Link>
-                  <Link
-                    to="achievements"
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    Achievements
-                  </Link>
-                  <Link
-                    to="priceList"
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    Price List
-                  </Link>
-                  <Link
-                    to="plans"
-                    smooth={true}
-                    duration={500}
-                    offset={-80}
-                    className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
-                    onClick={handleLinkClick}
-                  >
-                    Plans
-                  </Link>
-                </nav>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                  Home
+                </Link>
+                <Link
+                  to="featured"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Featured
+                </Link>
+                <Link
+                  to="mywork"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  My Work
+                </Link>
+                <Link
+                  to="achievements"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Achievements
+                </Link>
+                <Link
+                  to="priceList"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Price List
+                </Link>
+                <Link
+                  to="plans"
+                  smooth={true}
+                  duration={500}
+                  offset={-80}
+                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  onClick={handleLinkClick}
+                >
+                  Plans
+                </Link>
+              
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
