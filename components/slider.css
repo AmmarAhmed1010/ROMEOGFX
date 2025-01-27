@@ -1,7 +1,4 @@
-main {
-    width: min(1200px, 90vw);
-    margin: auto;
-}
+
 .slider {
     width: 100%;
     height: var(--height);

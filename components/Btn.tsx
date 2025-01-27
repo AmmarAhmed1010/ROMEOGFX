@@ -1,15 +1,35 @@
 "use client"
+import { off } from "process";
 import React from "react";
 import styled from "styled-components";
 
 interface BtnProps {
   text: string;
+  link?: string;
+
 }
 
-const Btn: React.FC<BtnProps> = ({ text }) => {
+const Btn: React.FC<BtnProps> = ({ text,link }) => {
+  const handleClick = () => {
+    if (link) {
+      const section = document.getElementById(link);
+      if (section) {
+        const offset = 100; // Adjust this value as needed (e.g., height of the header)
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+  
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+  
   return (
     <StyledWrapper>
-      <button className="Btn" data-text={text}>
+
+      <button   onClick={handleClick} className="Btn" data-text={text}>
         <span>{text}</span>
       </button>
     </StyledWrapper>

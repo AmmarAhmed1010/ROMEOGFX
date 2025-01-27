@@ -13,8 +13,8 @@ const SliderList: React.FC<SliderProps> = ({ quantity, width, height, reverse })
   return (
     
   <>
-     <h1 id='featured' className='underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10'>Featured Thumbnail</h1>
-    
+     <h1 id='featured' className='underline text-white text-start decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10'>Featured Thumbnail</h1>
+    <main>
     <div
       className="slider"
       data-reverse={reverse || undefined}
@@ -45,6 +45,7 @@ const SliderList: React.FC<SliderProps> = ({ quantity, width, height, reverse })
         ))}
       </div>
     </div>
+    </main>
   </>
   );
 };
