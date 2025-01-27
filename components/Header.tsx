@@ -1,19 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 const Header = () => {
-  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
-    setIsSheetOpen(false); // Close the sheet when a link is clicked
+    setIsMenuOpen(false); // Close the menu when a link is clicked
   };
 
   return (
@@ -25,10 +18,8 @@ const Header = () => {
         <div>
           <Link href="/" to="home">
             <div className="text-2xl flex font-serif font-bold md:text-3xl cursor-pointer">
-              
               <h1>Romeo</h1>
               <span className="text-[#30D6F3]">Gfx</span>
-
             </div>
           </Link>
         </div>
@@ -90,31 +81,28 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Hamburger Icon replaced with Sheet */}
+        {/* Hamburger Menu for Mobile */}
         <div className="lg:hidden flex items-center">
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger>
-              <button className="text-white focus:outline-none">
-                <div className="space-y-1">
-                  <div className="h-1 w-6 bg-white"></div>
-                  <div className="h-1 w-6 bg-white"></div>
-                  <div className="h-1 w-6 bg-white"></div>
-                </div>
-              </button>
-            </SheetTrigger>
-            <SheetContent className="bg-black/40">
-              <SheetHeader>
-                <SheetTitle className="text-start text-4xl mt-10 text-white flex"><h1>Romeo</h1>
-                <span className="text-[#30D6F3]">Gfx</span></SheetTitle>
-               
-              </SheetHeader>
-              {/* Mobile Navigation Links */}
-              <nav className="flex flex-col space-y-10 text-start mt-8">
+          <button
+            className="text-white focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <div className="space-y-1">
+              <div className="h-1 w-6 bg-white"></div>
+              <div className="h-1 w-6 bg-white"></div>
+              <div className="h-1 w-6 bg-white"></div>
+            </div>
+          </button>
+
+          {/* Mobile Navigation Menu */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 w-full bg-black/90 text-white py-6 px-6 z-50">
+              <nav className="flex flex-col space-y-6">
                 <Link
                   to="home"
                   smooth={true}
                   duration={500}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Home
@@ -124,7 +112,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Featured
@@ -134,7 +122,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   My Work
@@ -144,7 +132,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Achievements
@@ -154,7 +142,7 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Price List
@@ -164,15 +152,14 @@ const Header = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-2xl font-semibold text-white hover:text-[#30D6F3] cursor-pointer"
+                  className="text-2xl font-semibold hover:text-[#30D6F3] cursor-pointer"
                   onClick={handleLinkClick}
                 >
                   Plans
                 </Link>
-              
               </nav>
-            </SheetContent>
-          </Sheet>
+            </div>
+          )}
         </div>
       </div>
     </header>
