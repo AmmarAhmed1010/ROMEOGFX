@@ -4,6 +4,7 @@ import Achievements from "@/components/Achievements";
 import HeroSection from "@/components/HeroSection";
 import Plans from "@/components/Plans";
 import PriceList from "@/components/PriceList";
+import WorkCategoriesNew from "@/components/WorkCategoriesNew";
 // import WorkCategoriesNew from "@/components/WorkCategoriesNew";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
         {/* Featured */}
         <Slider />
         {/* Work categories */}
-        {/* <WorkCategoriesNew/> */}
+        <WorkCategoriesNew/>
         {/* Achievements */}
         <Achievements />
         {/* Price List */}

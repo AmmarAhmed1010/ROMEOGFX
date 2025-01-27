@@ -1,21 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap');
+/* Add these styles in your global CSS or component-level styles */
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* global.css or your main CSS file */
-/* .heading {
-  @apply 
-  underline
-  decoration-[#30D6F3]
-  text-white 
-  text-3xl 
-  md:text-5xl 
-  mb-6 
-  font-medium
-  italic 
-  mt-10;
-} */
 
+.font{
+font-family: "Playwrite VN";
+}
 body {
   font-family: serif;
   font-optical-sizing: auto;
@@ -23,4 +18,184 @@ body {
   font-style: normal;
   background-color: #070707;
 }
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+/* globals.css */
+/* Global class for all main sections */
+
+/* animaitons */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 10px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 15px #2563eb, 0 0 30px #2563eb, 0 0 10px #2563eb;
+  }
+  100% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 10px #3b82f6;
+  }
+}
+
+.glow-border {
+  border-color: transparent;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  background-clip: padding-box;
+  position: relative;
+  z-index: 1;
+  animation: glow 2s infinite;
+}
+/* 2 glow effect */
+
+/* 3 */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 15px #2563eb, 0 0 30px #2563eb;
+  }
+  100% {
+    box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6;
+  }
+}
+
+.glow-border {
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 8px;
+  padding: 3px; /* Space for glowing border */
+  background: linear-gradient(45deg, #3b82f6, #2563eb, #3b82f6);
+  animation: glow 2s infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+
+/* animaitons for borders */
+
+
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Hide scrollbar for Chrome, Safari, and Edge */
+
+/* Container for the gradient border */
+.border-gradient-animation {
+  position: relative;
+  padding: 2px; /* Adjust the padding to create the border effect */
+  border-radius: 8px; /* Adjust for rounded corners */
+  background: linear-gradient(45deg, blue, blue, red, red);
+  background-size: 400% 400%;
+  animation: borderAnimation 5s linear infinite;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.7), 0 0 6px rgba(255, 0, 0, 0.5); /* Red glow effect */
+}
+.content2 {
+  position: relative;
+  background-color:black; /* Dark background for better text visibility */
+  padding: 20px;
+  border-radius: 8px; /* Match the border radius of the outer container */
+  /* Light shadow for better separation */
+}
+.content1 {
+  position: relative;
+  background-color:black; /* Dark background for better text visibility */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* scrollbar hide */
+#list::-webkit-scrollbar{
+  display: none;
+}
+/* heading animation with a glow effect */
+.heading{
+  font-weight: 700;
+text-align: center;
+background: linear-gradient(to right,red,blue);
+color: transparent;
+-webkit-background-clip: text;
+padding-bottom: 40px;
+padding-top: 40px;
+
+text-shadow: 0 0 60px rgba(255, 0, 0, 0.5);
+animation: anime 1s infinite alternate;
+}
+@keyframes anime {
+  100%{
+    text-shadow: 0 0 60px rgba(0, 13, 255, 0.5);
+  }
+}
+
+
+/* buttons aniamitns */
+@layer utilities {
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-move 3s ease infinite;
+  }
+}
+
+
+/* moving courasel */
+@keyframes carousel-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes carousel-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.carousel-left-to-right {
+  animation: carousel-left-to-right 20s linear infinite;
+}
+
+.carousel-right-to-left {
+  animation: carousel-right-to-left 20s linear infinite;
+}
+
+
+
+/* infinite animations for pic */
 
