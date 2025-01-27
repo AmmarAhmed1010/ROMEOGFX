@@ -16,7 +16,7 @@ export default function Home() {
         {/* Featured */}
         <Slider />
         {/* Work categories */}
-        <WorkCategoriesNew/>
+        {/* <WorkCategoriesNew/> */}
         {/* Achievements */}
         <Achievements />
         {/* Price List */}
