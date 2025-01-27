@@ -7,10 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.font{
-font-family: "Playwrite VN";
-}
 body {
   font-family: serif;
   font-optical-sizing: auto;

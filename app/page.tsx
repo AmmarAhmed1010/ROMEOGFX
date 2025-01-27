@@ -4,6 +4,7 @@ import Achievements from "@/components/Achievements";
 import HeroSection from "@/components/HeroSection";
 import Plans from "@/components/Plans";
 import PriceList from "@/components/PriceList";
+import Portfolio from "@/components/Portfolio";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         {/* Featured */}
         <Slider />
         {/* Work categories */}
+        <Portfolio/>
 
         {/* Achievements */}
         <Achievements />
