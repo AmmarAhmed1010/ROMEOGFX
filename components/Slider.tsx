@@ -13,7 +13,7 @@ const SliderList: React.FC<SliderProps> = ({ quantity, width, height, reverse })
   return (
     
   <>
-     <h1 id='featured' className='heading'>Featured Thumbnail</h1>
+     <h1 id='featured'  className='text-yellow-100'>Featured Thumbnail</h1>
     
     <div
       className="slider"

@@ -13,7 +13,7 @@ const PriceList: React.FC = () => {
  }, []);
   return (
    <>
-   <h1 id='priceList' className='heading'>Price List</h1>
+   <h1 id='priceList'  className='text-yellow-100'>Price List</h1>
    <div className='grid grid-cols-1  gap-6 md:grid-cols-3 '>
   <StyledWrapper  data-aos="fade-up-right" className='w-full'>
     <div className="card">

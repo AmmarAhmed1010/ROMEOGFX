@@ -13,7 +13,7 @@ const Achievements = () => {
 
   return (
  <>
-   <h1 id='achievements' className=''>Achievements</h1>
+   <h1 id='achievements' className='text-yellow-100'>Achievements</h1>
    <div className='grid grid-cols-1 gap-6 md:grid-cols-3 '>
      <StyledWrapper className='w-full'>
       <div  data-aos="fade-up-right" className="outer">

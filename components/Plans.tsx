@@ -26,7 +26,7 @@ const Plans = () => {
 
   return (
    <>
-   <h1 id='plans' className='heading'>Plans</h1>
+   <h1 id='plans'  className='text-yellow-100'>Plans</h1>
   
    <div className='grid grid-cols-1  gap-6 md:grid-cols-3 '>
      <StyledWrapper data-aos="fade-up-right" className='w-full'>
