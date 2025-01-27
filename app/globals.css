@@ -8,7 +8,7 @@
 @tailwind utilities;
 
 /* global.css or your main CSS file */
-.heading {
+/* .heading {
   @apply 
   underline
   decoration-[#30D6F3]
@@ -19,7 +19,7 @@
   font-medium
   italic 
   mt-10;
-}
+} */
 
 body {
   font-family: serif;
