@@ -92,7 +92,7 @@ const Header = () => {
 
         {/* Hamburger Icon replaced with Sheet */}
         <div className="lg:hidden flex items-center">
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+          <Sheet open={isSheetOpen}  onOpenChange={setIsSheetOpen}>
             <SheetTrigger>
               <button className="text-white focus:outline-none">
                 <div className="space-y-1">
@@ -102,7 +102,7 @@ const Header = () => {
                 </div>
               </button>
             </SheetTrigger>
-            <SheetContent className="bg-black/40">
+            <SheetContent side={'top'} className="bg-black/40">
               <SheetHeader>
                 <SheetTitle className="text-start text-4xl mt-10 text-white flex"><h1>Romeo</h1>
                 <span className="text-[#30D6F3]">Gfx</span></SheetTitle>
