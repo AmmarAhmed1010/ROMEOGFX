@@ -5,10 +5,10 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 const categories = [
-  { name: "IRL", images: Array.from({ length: 20 }, (_, i) => `/images/irl/irl-${i + 1}.jpg`) },
-  { name: "Banner", images: Array.from({ length: 20 }, (_, i) => `/images/banner/banner-${i + 1}.jpg`) },
-  { name: "Thumbnail", images: Array.from({ length: 20 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`) },
-  { name: "Logo", images: Array.from({ length: 20 }, (_, i) => `/images/logo/logo-${i + 1}.jpg`) },
+  // { name: "IRL", images: Array.from({ length: 20 }, (_, i) => `/images/irl/irl-${i + 1}.jpg`) },
+  { name: "Banner", images: Array.from({ length: 15 }, (_, i) => `/banner/banner (${i + 1}).jpg`) },
+  { name: "Thumbnail", images: Array.from({ length: 66 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`) },
+  { name: "Logo", images: Array.from({ length: 35 }, (_, i) => `/logo/logo (${i + 1}).jpg`) },
 ];
 
 const WorkCategories: React.FC = () => {

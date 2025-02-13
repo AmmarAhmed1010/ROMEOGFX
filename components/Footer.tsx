@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { Link } from "react-scroll";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Footer: React.FC = () => {
@@ -21,25 +23,29 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 border-b-2 border-[#30D6F3] inline-block">
               Quick Links
             </h3>
-            <ul className="space-y-2">
-              {[
-                { name: "Home", link: "#home" },
-                { name: "My Work", link: "#mywork" },
-                { name: "Featured", link: "#featured" },
-                { name: "Testimonials", link: "#testimonials" },
-                { name: "Plans", link: "#plans" },
-                { name: "Services", link: "#services" },
-              ].map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.link}
-                    className="text-gray-300 hover:text-[#30D6F3]  transition"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <ul className="space-y-3">
+          {[
+            { name: "Home", link: "home" },
+            { name: "Featured", link: "featured" },
+            { name: "My Work", link: "mywork" },
+            { name: "Achievements", link: "achievements" },
+            { name: "Price List", link: "priceList" },
+            { name: "Plans", link: "plans" },
+          ].map((item, index) => (
+            <li key={index}>
+              <Link
+                to={item.link}
+                smooth={true}
+                duration={500}
+                offset={-100} // Adjust this offset if needed
+                className="cursor-pointer text-gray-300 hover:text-[#30D6F3] transition"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
           </div>
 
           {/* Social Media */}
@@ -49,7 +55,7 @@ const Footer: React.FC = () => {
             </h3>
             <div className="flex justify-center md:justify-start space-x-6 mt-4">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/share/15niY7o9uy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-600 transition"
@@ -57,7 +63,7 @@ const Footer: React.FC = () => {
                 <FaFacebook className="text-2xl" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/romeo_gfx_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-500 transition"
@@ -65,21 +71,13 @@ const Footer: React.FC = () => {
                 <FaInstagram className="text-2xl" />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://x.com/Romeo_gfx?s=09"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 transition"
               >
                 <FaTwitter className="text-2xl" />
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-700 transition"
-              >
-                <FaLinkedin className="text-2xl" />
-              </a>
+              </a> 
             </div>
           </div>
         </div>
