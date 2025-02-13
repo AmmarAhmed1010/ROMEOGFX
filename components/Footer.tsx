@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Link } from "react-scroll";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
