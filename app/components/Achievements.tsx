@@ -15,13 +15,14 @@ const Achievements = () => {
  <>
    <h1 id='achievements' className='underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10'>Achievements</h1>
    <div className='grid grid-cols-1 gap-6 md:grid-cols-3 '>
+    
      <StyledWrapper className='w-full'>
       <div  data-aos="fade-up-right" className="outer">
         <div className="dot" />
         <div className="card">
           <div className="ray" />
-          <div className="text">100 Million</div>
-          <div>Generated Subscribers</div>
+          <div className="text">1500 +</div>
+          <div>Projects</div>
           <div className="line topl" />
           <div className="line leftl" />
           <div className="line bottoml" />
@@ -34,8 +35,8 @@ const Achievements = () => {
          <div className="dot" />
          <div className="card">
            <div className="ray" />
-           <div className="text">1.5 Billion </div>
-           <div>Thumbnail Clicks</div>
+           <div className="text">4 year+</div>
+           <div>Experience</div>
            <div className="line topl" />
            <div className="line leftl" />
            <div className="line bottoml" />
@@ -48,8 +49,8 @@ const Achievements = () => {
           <div className="dot" />
           <div className="card">
             <div className="ray" />
-            <div className="text">5 Hundred </div>
-            <div>Happy Customers</div>
+            <div className="text">500 +</div>
+            <div>Satisfied Customers</div>
             <div className="line topl" />
             <div className="line leftl" />
             <div className="line bottoml" />

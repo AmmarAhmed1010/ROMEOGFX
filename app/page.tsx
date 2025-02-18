@@ -1,10 +1,10 @@
-import Header from "@/components/Header";
-import Slider from "@/components/Slider";
-import Achievements from "@/components/Achievements";
-import HeroSection from "@/components/HeroSection";
-import Plans from "@/components/Plans";
-import PriceList from "@/components/PriceList";
-import WorkCategories from "@/components/WorkCategories";
+import Header from "@/app/components/Header";
+import Slider from "@/app/components/Slider";
+import Achievements from "@/app/components/Achievements";
+import HeroSection from "@/app/components/HeroSection";
+import Plans from "@/app/components/Plans";
+import PriceList from "@/app/components/PriceList";
+import WorkCategories from "@/app/components/WorkCategories";
 
 export default function Home() {
   return (

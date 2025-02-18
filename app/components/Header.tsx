@@ -7,7 +7,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/app/components/ui/sheet";
 
 const Header = () => {
   const [isSheetOpen, setIsSheetOpen] = useState(false);

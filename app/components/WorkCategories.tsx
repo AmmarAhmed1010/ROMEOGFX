@@ -1,18 +1,37 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Link from "next/link";
 
 const categories = [
   // { name: "IRL", images: Array.from({ length: 20 }, (_, i) => `/images/irl/irl-${i + 1}.jpg`) },
-  { name: "Banner", images: Array.from({ length: 15 }, (_, i) => `/banner/banner (${i + 1}).jpg`) },
-  { name: "Thumbnail", images: Array.from({ length: 66 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`) },
-  { name: "Logo", images: Array.from({ length: 35 }, (_, i) => `/logo/logo (${i + 1}).jpg`) },
+  {
+    name: "Thumbnail",
+    images: Array.from(
+      { length: 66 },
+      (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`
+    ),
+  },
+  {
+    name: "Banner",
+    images: Array.from(
+      { length: 15 },
+      (_, i) => `/banner/banner (${i + 1}).jpg`
+    ),
+  },
+  {
+    name: "Logo",
+    images: Array.from({ length: 35 }, (_, i) => `/logo/logo (${i + 1}).jpg`),
+  },
+  {
+    name: "Logo",
+    images: Array.from({ length: 35 }, (_, i) => `/logo/logo (${i + 1}).jpg`),
+  },
 ];
 
 const WorkCategories: React.FC = () => {
-
   useEffect(() => {
     AOS.init({ duration: 1000, offset: 50 });
   }, []);
@@ -25,55 +44,90 @@ const WorkCategories: React.FC = () => {
 
   return (
     <>
-      <h1 id='mywork' className='underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10'>
+      <h1
+        id="mywork"
+        className="underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10"
+      >
         Work Categories
       </h1>
 
-      <div className='grid grid-cols-1 gap-6'>
-        {categories.map((category, index) => (
-          <StyledCategoryWrapper key={index} data-aos="fade-up-right">
+      <div className="grid grid-cols-1 gap-6">
+        <Link href="/thumbnail">
+          <StyledCategoryWrapper data-aos="fade-up-right">
             <div className="card">
               <div className="card__border" />
               <div className="card_title__container">
                 <div className="space-y-6  text-white">
                   <div className="space-y-4">
                     {/* Category Header */}
-                    <button
-                      onClick={() => toggleCategory(category.name)}
-                      className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors"
-                    >
-                      <span>{category.name}</span>
-                      <span>{activeCategory === category.name ? "▲" : "▼"}</span>
+                    <button className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors">
+                      <span>Thumbnail</span>
+                      <span>▼</span>
                     </button>
-
-                    {/* Image Grid (Collapsible Section) */}
-                    {activeCategory === category.name && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-4 transition-all duration-500">
-                        {category.images.map((image, idx) => (
-                          <div
-                            key={idx}
-                            className="relative overflow-hidden rounded-lg shadow-lg group"
-                          >
-                            <img
-                              src={image}
-                              alt={`${category.name} ${idx + 1}`}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                            />
-                            {/* Hover Effect */}
-                            <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-                              <p className="text-white text-lg font-semibold">View</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
               <hr className="line" />
             </div>
           </StyledCategoryWrapper>
-        ))}
+        </Link>
+        <Link href="/logo">
+          <StyledCategoryWrapper data-aos="fade-up-right">
+            <div className="card">
+              <div className="card__border" />
+              <div className="card_title__container">
+                <div className="space-y-6  text-white">
+                  <div className="space-y-4">
+                    {/* Category Header */}
+                    <button className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors">
+                      <span>Logo</span>
+                      <span>▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr className="line" />
+            </div>
+          </StyledCategoryWrapper>
+        </Link>
+        <Link href="/banner">
+          <StyledCategoryWrapper data-aos="fade-up-right">
+            <div className="card">
+              <div className="card__border" />
+              <div className="card_title__container">
+                <div className="space-y-6  text-white">
+                  <div className="space-y-4">
+                    {/* Category Header */}
+                    <button className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors">
+                      <span>Banner</span>
+                      <span>▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr className="line" />
+            </div>
+          </StyledCategoryWrapper>
+        </Link>
+        <Link href="overlay">
+          <StyledCategoryWrapper data-aos="fade-up-right">
+            <div className="card">
+              <div className="card__border" />
+              <div className="card_title__container">
+                <div className="space-y-6  text-white">
+                  <div className="space-y-4">
+                    {/* Category Header */}
+                    <button className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors">
+                      <span>Overlay</span>
+                      <span>▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr className="line" />
+            </div>
+          </StyledCategoryWrapper>
+        </Link>
       </div>
     </>
   );
@@ -98,15 +152,15 @@ const StyledCategoryWrapper = styled.div`
 
     background-color: hsla(240, 15%, 9%, 1);
     background-image: radial-gradient(
-      at 88% 40%,
-      hsla(240, 15%, 9%, 1) 0px,
-      transparent 85%
-    ),
-    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
-    radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
-    radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
-    radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsl(189, 99%, 26%) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsl(189, 97%, 36%) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsl(188, 94%, 13%) 0px, transparent 85%);
 
     border-radius: 1rem;
     box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
