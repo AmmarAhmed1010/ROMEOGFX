@@ -79,14 +79,13 @@ const WorkCategories: React.FC = () => {
             </div>
           </StyledCategoryWrapper>
         </Link>
-        <Link href="overlay">
+        {/* <Link href="overlay">
           <StyledCategoryWrapper data-aos="fade-up-right">
             <div className="card">
               <div className="card__border" />
               <div className="card_title__container">
                 <div className="space-y-6  text-white">
                   <div className="space-y-4">
-                    {/* Category Header */}
                     <button className="w-full flex justify-between items-center text-xl font-bold px-4 rounded-lg transition-colors">
                       <span>Overlay</span>
                       <span>▼</span>
@@ -97,7 +96,7 @@ const WorkCategories: React.FC = () => {
               <hr className="line" />
             </div>
           </StyledCategoryWrapper>
-        </Link>
+        </Link> */}
       </div>
     </>
   );
