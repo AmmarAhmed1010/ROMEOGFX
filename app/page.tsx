@@ -1,10 +1,10 @@
 import Header from "@/app/components/Header";
-import Slider from "@/app/components/Slider";
 import Achievements from "@/app/components/Achievements";
 import HeroSection from "@/app/components/HeroSection";
 import Plans from "@/app/components/Plans";
 import PriceList from "@/app/components/PriceList";
 import WorkCategories from "@/app/components/WorkCategories";
+import DualSlider from "./components/CustomSlider";
 
 export default function Home() {
   return (
@@ -14,7 +14,8 @@ export default function Home() {
         {/* hero section */}
         <HeroSection />
         {/* Featured */}
-        <Slider />
+        <DualSlider/>
+        {/* <Slider /> */}
         {/* Work categories */}
         <WorkCategories/>
         {/* Achievements */}

@@ -14,8 +14,8 @@ const Page = () => {
             src={src} 
             priority
             alt={`Thumbnail ${index + 1}`} 
-            width={300} // 👈 Adjust width dynamically
-            height={300} // 👈 Adjust height dynamically
+            width={500} // 👈 Adjust width dynamically
+            height={500} // 👈 Adjust height dynamically
             objectFit="contain" // 👈 Ensures the full image is visible
             className="rounded-xl w-full h-auto"
           />

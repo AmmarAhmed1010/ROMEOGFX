@@ -1,51 +1,61 @@
 import React from "react";
 import Image from "next/image";
-import Links from "./Links";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Btn from "./Btn";
 
 const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="hero min-h-screen text-white flex flex-col lg:flex-row items-center justify-center p-6 lg:p-16"
+      className="hero min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-16 py-10 lg:py-20 text-white"
     >
-      {/* Left Content: Image */}
-      <div className="hero-image w-full mt-10 lg:w-1/2 mb-6 lg:mb-0">
-        <Image
-          src="/profile_image/profile_image.png"
-          alt="Graphic Designer"
-          width={500}
-          height={500}
-          className="w-full rounded-lg object-cover shadow-lg"
-          priority
-        />
-      </div>
+      {/* Right Content: Text & Buttons */}
+      <div className="hero-content w-full lg:w-1/2 text-center lg:text-left">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          Hi, I&apos;m <span className="text-[#30D6F3]">RomeoGFX</span>
+        </h1>
 
-      {/* Right Content: Title, Description, Social Media, Buttons */}
-      <div className="hero-content w-full lg:w-1/2 flex flex-col items-start text-center md:text-start">
-        {/* Title */}
-        <div className="flex ">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-4">
-            Hi, I&apos;m Romeo<span className="text-[#30D6F3]">GFX</span>
-          </h1>
-        </div>
-
-        {/* Description */}
-        <p className="text-lg lg:text-xl mb-6 leading-relaxed">
+        <p className="text-base sm:text-lg lg:text-xl mb-6 leading-relaxed">
           I specialize in creating unique, visually stunning designs that tell
           a story and captivate your audience.
         </p>
 
         {/* Social Media Handles */}
-        <div className="social-media flex items-center justify-center md:justify-start w-full space-x-4 mb-6">
-          <Links />
+        <div className="flex justify-center lg:justify-start space-x-6 mb-6">
+          {[
+            { icon: FaFacebookF, link: "https://www.facebook.com" },
+            { icon: FaTwitter, link: "https://www.twitter.com" },
+            { icon: FaInstagram, link: "https://www.instagram.com" },
+          ].map(({ icon: Icon, link }, index) => (
+            <a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#30D6F3] transition duration-300 transform hover:scale-110 hover:text-white hover:drop-shadow-[0_0_10px_#30D6F3]"
+            >
+              <Icon size={32} />
+            </a>
+          ))}
         </div>
 
         {/* Buttons */}
-        <div className="buttons flex space-x-4">
+        <div className="flex flex-wrap justify-center lg:justify-start space-x-4">
           <Btn text="View My Work" link="mywork" />
           <Btn text="Contact" link="contact" />
         </div>
+      </div>
+
+      {/* Left Content: Image */}
+      <div className="hero-image w-full lg:w-1/2 flex justify-center">
+        <Image
+          src="/profile_image/profile_image.png"
+          alt="Graphic Designer"
+          width={500}
+          height={500}
+          className="w-72 sm:w-96 lg:w-full lg:max-w-[550px] rounded-lg object-cover shadow-lg transition duration-300"
+          priority
+        />
       </div>
     </section>
   );

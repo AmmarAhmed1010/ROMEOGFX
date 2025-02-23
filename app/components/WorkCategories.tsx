@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const WorkCategories: React.FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, offset: 50 });
+    AOS.init({ duration: 1000, offset: 30 });
   }, []);
 
 
