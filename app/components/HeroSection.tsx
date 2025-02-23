@@ -7,10 +7,10 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="hero min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-16 py-10 lg:py-20 text-white"
+      className="hero h-[80vh] md:h-[95vh] flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-16 py-10 lg:py-20 text-white"
     >
       {/* Right Content: Text & Buttons */}
-      <div className="hero-content w-full lg:w-1/2 text-center lg:text-left">
+      <div className="hero-content w-full lg:w-1/2 text-center ">
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4">
           Hi, I&apos;m <span className="text-[#30D6F3]">RomeoGFX</span>
         </h1>
@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Social Media Handles */}
-        <div className="flex justify-center lg:justify-start space-x-6 mb-6">
+        <div className="flex justify-center  space-x-6 mb-6">
           {[
             { icon: FaFacebookF, link: "https://www.facebook.com" },
             { icon: FaTwitter, link: "https://www.twitter.com" },
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-wrap justify-center lg:justify-start space-x-4">
+        <div className="flex flex-wrap justify-center gap-3">
           <Btn text="View My Work" link="mywork" />
           <Btn text="Contact" link="contact" />
         </div>
