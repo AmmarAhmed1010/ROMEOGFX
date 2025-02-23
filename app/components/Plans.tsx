@@ -35,7 +35,7 @@ const handleBuyNow = (plan: string) => {
         <div className="card__border" />
         <div className="card_title__container">
           <span className="card_title">Basic Plan</span>
-          <p className="card_paragraph">Rs: 1999</p>
+          <p className="card_paragraph">Rs: 2200</p>
         </div>
         <hr className="line" />
         <ul className="card__list">

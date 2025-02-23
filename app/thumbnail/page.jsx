@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const images = Array.from({ length: 50 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`);
+const images = Array.from({ length: 38 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`);
 
 const Page = () => {
   return (
     <div className="bg-black min-h-screen text-white py-6 px-4">
       <h1 className="text-3xl font-bold text-center mb-6">Thumbnails</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {images.map((src, index) => (
           <Image 
             key={index}

@@ -126,7 +126,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Intro/Outro</span>
         <p className="card_paragraph">Dynamic video intros/outros</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:800</h1>
+        <h1 className='text-white text-xl'>Rs:1000</h1>
      </div>
       </div>
      
