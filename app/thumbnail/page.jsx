@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const images = Array.from({ length: 66 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`);
+const images = Array.from({ length: 50 }, (_, i) => `/thumbnail/thumbnail (${i + 1}).jpg`);
 
 const Page = () => {
   return (

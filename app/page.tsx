@@ -24,6 +24,8 @@ export default function Home() {
         <PriceList />
         {/* Plans */}
         <Plans />
+
+        
       </div>
     </>
   );
