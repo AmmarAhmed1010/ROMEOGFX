@@ -4,14 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const images = [
-  "/thumbnail/thumbnail (1).jpg",
-  "/thumbnail/thumbnail (2).jpg",
-  "/thumbnail/thumbnail (3).jpg",
-  "/thumbnail/thumbnail (4).jpg",
-  "/thumbnail/thumbnail (5).jpg",
-  "/thumbnail/thumbnail (6).jpg",
-  "/thumbnail/thumbnail (7).jpg",
-  "/thumbnail/thumbnail (8).jpg",
+  "/slider/slider (1).jpg",
+  "/slider/slider (2).jpg",
+  "/slider/slider (3).jpg",
+  "/slider/slider (4).jpg",
+  "/slider/slider (5).jpg",
+  "/slider/slider (6).jpg",
+  "/slider/slider (7).jpg",
+  "/slider/slider (8).jpg",
+  "/slider/slider (9).jpg",
+  "/slider/slider (10).jpg",
+  "/slider/slider (11).jpg",
 ];
 
 const DualSlider = () => {
