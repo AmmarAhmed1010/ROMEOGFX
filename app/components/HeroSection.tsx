@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="hero h-[80vh] md:h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-center lg:px-16 py-10 lg:py-20 text-white"
+      className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center lg:px-16 py-10 lg:py-20 text-white"
     >
       {/* Right Content: Text & Buttons */}
       <div className="hero-content w-full lg:w-1/2 text-center ">

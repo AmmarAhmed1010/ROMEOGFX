@@ -54,7 +54,7 @@ const DualSlider = () => {
         <motion.div
           className="flex"
           animate={{ x: ["0%", `-${100}%`] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "linear" }} // Increased speed
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Increased speed
         >
           {[...firstSliderImages, ...firstSliderImages].map((src, i) => (
             <div
@@ -80,7 +80,7 @@ const DualSlider = () => {
         <motion.div
           className="flex"
           animate={{ x: [`-${100}%`, "0%"] }}
-          transition={{ repeat: Infinity, duration: 5, ease: "linear" }} // Increased speed
+          transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Increased speed
         >
           {[...secondSliderImages, ...secondSliderImages].map((src, i) => (
             <div
