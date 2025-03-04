@@ -4,10 +4,17 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import Btn from "./Btn";
 
 const HeroSection: React.FC = () => {
+  const handleBuyNow = (plan: string) => {
+    const message = `Hi! I am interested in the ${plan}. Could you provide me with more details?`;
+    const whatsappNumber = "3158552233"; // Replace with your WhatsApp number
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <section
       id="home"
-      className="hero h-[80vh] md:h-[95vh] flex flex-col-reverse lg:flex-row items-center justify-center px-6 lg:px-16 py-10 lg:py-20 text-white"
+      className="hero h-[80vh] md:h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-center lg:px-16 py-10 lg:py-20 text-white"
     >
       {/* Right Content: Text & Buttons */}
       <div className="hero-content w-full lg:w-1/2 text-center ">
@@ -40,9 +47,9 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex justify-center gap-3">
           <Btn text="View My Work" link="mywork" />
-          <Btn text="Contact" link="contact" />
+          <Btn text="Contact"  link="contact" />
         </div>
       </div>
 

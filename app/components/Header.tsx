@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header
-      className="bg-[#0b010c] bg-opacity-80 border-t-2 border-b-2 border-gray-500 text-white px-6 py-4 lg:px-8 lg:py-6 z-50 fixed w-full top-0"
+      className="bg-[#0b010c] bg-opacity-80 border-t-2 border-b-2 border-gray-500 text-white px-6 py-4 lg:px-8 lg:py-6 z-50 sticky w-full top-0"
     >
       <div className="flex justify-between items-center">
         {/* Logo */}

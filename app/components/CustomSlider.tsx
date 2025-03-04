@@ -41,7 +41,7 @@ const DualSlider = () => {
   }, []);
 
   return (
-    <div className="w-full space-y-2 overflow-hidden">
+    <div className="w-full space-y-1 overflow-hidden">
       <h1
         id="featured"
         className="underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10"
@@ -54,7 +54,7 @@ const DualSlider = () => {
         <motion.div
           className="flex"
           animate={{ x: ["0%", `-${100}%`] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 5, ease: "linear" }} // Increased speed
         >
           {[...firstSliderImages, ...firstSliderImages].map((src, i) => (
             <div
@@ -80,7 +80,7 @@ const DualSlider = () => {
         <motion.div
           className="flex"
           animate={{ x: [`-${100}%`, "0%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 5, ease: "linear" }} // Increased speed
         >
           {[...secondSliderImages, ...secondSliderImages].map((src, i) => (
             <div

@@ -16,12 +16,10 @@ const Plans = () => {
 
 
 const handleBuyNow = (plan: string) => {
-  const questionMarks = '?'.repeat(100); // Repeat '?' 100 times
-  const message = `Hi! I am interested in the ${plan}. Could you provide me with more details? ${questionMarks}`;
+  const message = `Hi! I am interested in the ${plan}. Could you provide me with more details?`;
   const whatsappNumber = "3158552233"; // Replace with your WhatsApp number
   const encodedMessage = encodeURIComponent(message);
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
   window.open(whatsappURL, "_blank");
 };
 

@@ -15,7 +15,6 @@ export default function Home() {
         <HeroSection />
         {/* Featured */}
         <DualSlider/>
-        {/* <Slider /> */}
         {/* Work categories */}
         <WorkCategories/>
         {/* Achievements */}
