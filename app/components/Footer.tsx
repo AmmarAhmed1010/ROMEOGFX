@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4 border-b-2 border-[#30D6F3] inline-block">
               Contact Us
             </h3>
-            <p className="mb-2 text-gray-300">Email: example@example.com</p>
+            <p className="mb-2 text-gray-300">Email: romeogfx0@gmail.com</p>
             <p className="text-gray-300">Phone: +92 315 8552233</p>
           </div>
 

@@ -5,6 +5,7 @@ import Plans from "@/app/components/Plans";
 import PriceList from "@/app/components/PriceList";
 import WorkCategories from "@/app/components/WorkCategories";
 import DualSlider from "./components/CustomSlider";
+import FirstSlider from "./components/FirstSlider";
 
 export default function Home() {
   return (
@@ -14,7 +15,12 @@ export default function Home() {
         {/* hero section */}
         <HeroSection />
         {/* Featured */}
+        <div className="md:hidden flex">
         <DualSlider/>
+        </div>
+        <div className="md:flex hidden">
+<FirstSlider/>
+        </div>
         {/* Work categories */}
         <WorkCategories/>
         {/* Achievements */}

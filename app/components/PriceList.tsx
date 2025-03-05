@@ -7,10 +7,10 @@ import AOS from "aos";
 import { useEffect } from "react";
 
 const PriceList: React.FC = () => {
-   useEffect(() => {
-     AOS.init({ duration: 1000,  offset: 50 });
-     
- }, []);
+  useEffect(() => {
+    AOS.init({ duration: 800, offset: 50 });
+    AOS.refresh();
+  }, []);
   return (
    <>
    <h1 id='priceList' className='underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10'>Price List</h1>

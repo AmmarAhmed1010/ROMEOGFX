@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const WorkCategories: React.FC = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, offset: 30 });
+    AOS.init({ duration: 1000, offset: 10 });
   }, []);
 
 
@@ -79,7 +79,7 @@ const WorkCategories: React.FC = () => {
             </div>
           </StyledCategoryWrapper>
         </Link>
-        {/* <Link href="overlay">
+        <Link href="overlay">
           <StyledCategoryWrapper data-aos="fade-up-right">
             <div className="card">
               <div className="card__border" />
@@ -96,7 +96,7 @@ const WorkCategories: React.FC = () => {
               <hr className="line" />
             </div>
           </StyledCategoryWrapper>
-        </Link> */}
+        </Link>
       </div>
     </>
   );

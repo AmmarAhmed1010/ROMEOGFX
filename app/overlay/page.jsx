@@ -1,11 +1,28 @@
-import React from 'react'
+"use client";
+import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-      
+    <div className="p-4">
+       <div className="bg-black text-white py-6 px-4">
+       <h1 className="text-3xl font-bold text-center mb-6">Thumbnails</h1>
+       </div>
+      {/* Video Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {Array.from({ length: 9 }).map((_, index) => (
+          <video
+            key={index}
+            src={`/overlay/overlay (${index + 1}).mp4`} // Ensure correct file path
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
