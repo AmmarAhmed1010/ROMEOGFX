@@ -4,8 +4,6 @@ import HeroSection from "@/app/components/HeroSection";
 import Plans from "@/app/components/Plans";
 import PriceList from "@/app/components/PriceList";
 import WorkCategories from "@/app/components/WorkCategories";
-import DualSlider from "./components/CustomSlider";
-import FirstSlider from "./components/FirstSlider";
 import InfiniteSlider from "./components/InfiniteSlider";
 import SecondSlider from "./components/SecondSlider";
 

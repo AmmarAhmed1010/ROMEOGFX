@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
 
 const images = [
     "/thumbnail/thumbnail (9).jpg",
