@@ -30,7 +30,7 @@ const InfiniteSlider = () => {
         transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
       >
         {duplicatedImages.map((src, index) => (
-          <div key={index} className="w-[300px] flex-shrink-0">
+          <div key={index} className="w-[200px] md:w-[250px] sm:w-[300px] flex-shrink-0">
             <Image
               src={src}
               alt={`Thumbnail ${index + 1}`}
