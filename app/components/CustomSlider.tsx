@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -27,6 +27,8 @@ const secondSliderImages = [
 
 const DualSlider = () => {
   const [itemsPerView, setItemsPerView] = useState(4);
+  const firstSliderRef = useRef(null);
+  const secondSliderRef = useRef(null);
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -40,6 +42,11 @@ const DualSlider = () => {
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
+  // Function to duplicate images to create a seamless infinite loop
+  const createLoopedImages = (images: string[]) => {
+    return [...images, ...images, ...images];
+  };
+
   return (
     <div className="w-full space-y-1 overflow-hidden">
       <h1
@@ -52,11 +59,13 @@ const DualSlider = () => {
       {/* First Slider (Left to Right) */}
       <div className="w-full overflow-hidden relative">
         <motion.div
+          ref={firstSliderRef}
           className="flex"
-          animate={{ x: ["0%", `-${100}%`] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Increased speed
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
         >
-          {[...firstSliderImages, ...firstSliderImages].map((src, i) => (
+          {createLoopedImages(firstSliderImages).map((src, i) => (
             <div
               key={i}
               style={{ minWidth: `${100 / itemsPerView}%`, padding: "8px" }}
@@ -78,11 +87,13 @@ const DualSlider = () => {
       {/* Second Slider (Right to Left) */}
       <div className="w-full overflow-hidden relative">
         <motion.div
+          ref={secondSliderRef}
           className="flex"
-          animate={{ x: [`-${100}%`, "0%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }} // Increased speed
+          initial={{ x: "-100%" }}
+          animate={{ x: "0%" }}
+          transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
         >
-          {[...secondSliderImages, ...secondSliderImages].map((src, i) => (
+          {createLoopedImages(secondSliderImages).map((src, i) => (
             <div
               key={i}
               style={{ minWidth: `${100 / itemsPerView}%`, padding: "8px" }}

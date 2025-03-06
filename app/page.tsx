@@ -6,6 +6,8 @@ import PriceList from "@/app/components/PriceList";
 import WorkCategories from "@/app/components/WorkCategories";
 import DualSlider from "./components/CustomSlider";
 import FirstSlider from "./components/FirstSlider";
+import InfiniteSlider from "./components/InfiniteSlider";
+import SecondSlider from "./components/SecondSlider";
 
 export default function Home() {
   return (
@@ -15,12 +17,23 @@ export default function Home() {
         {/* hero section */}
         <HeroSection />
         {/* Featured */}
-        <div className="md:hidden flex">
+        <div>
+        <h1
+        id="featured"
+        className="underline text-white decoration-[#30D6F3] text-3xl md:text-5xl mb-6 font-semibold mt-10"
+      >
+        Featured Thumbnail
+      </h1>
+
+        <InfiniteSlider/>
+        <SecondSlider/>
+        </div>
+        {/* <div className="md:hidden flex">
         <DualSlider/>
         </div>
         <div className="md:flex hidden">
 <FirstSlider/>
-        </div>
+        </div> */}
         {/* Work categories */}
         <WorkCategories/>
         {/* Achievements */}
