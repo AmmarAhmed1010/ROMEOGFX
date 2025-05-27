@@ -1,3 +1,4 @@
+"use client";
 import Header from "@/app/components/Header";
 import Achievements from "@/app/components/Achievements";
 import HeroSection from "@/app/components/HeroSection";
@@ -6,8 +7,11 @@ import PriceList from "@/app/components/PriceList";
 import WorkCategories from "@/app/components/WorkCategories";
 import InfiniteSlider from "./components/InfiniteSlider";
 import SecondSlider from "./components/SecondSlider";
+import LocomotiveScroll from 'locomotive-scroll';
 
 export default function Home() {
+  
+const locomotiveScroll = new LocomotiveScroll();
   return (
     <>
       <Header />
