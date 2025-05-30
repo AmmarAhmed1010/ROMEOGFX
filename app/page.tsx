@@ -8,14 +8,24 @@ import WorkCategories from "@/app/components/WorkCategories";
 import InfiniteSlider from "./components/InfiniteSlider";
 import SecondSlider from "./components/SecondSlider";
 import LocomotiveScroll from 'locomotive-scroll';
+import { useEffect } from 'react';
 
 export default function Home() {
-  
-const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    });
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
+
   return (
     <>
       <Header />
-      <div className="px-4 md:px-16 ">
+      <div className="px-4 md:px-16" data-scroll-container>
         {/* hero section */}
         <HeroSection />
         {/* Featured */}
