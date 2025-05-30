@@ -13,8 +13,13 @@ import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
     const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true
+      lenisOptions: {
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true
+      }
     });
 
     return () => {
