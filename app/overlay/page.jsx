@@ -1,55 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useVideoPreloader } from "../hooks/useVideoPreloader";
 
 const Page = () => {
   const [videos, setVideos] = useState([]);
-  const [error, setError] = useState(null);
-  const [preloadedVideos, setPreloadedVideos] = useState({});
+  const { preloadedVideos, error } = useVideoPreloader(8, '/overlay');
 
   useEffect(() => {
-    const preloadVideo = (src) => {
-      return new Promise((resolve) => {
-        const video = document.createElement('video');
-        video.src = src;
-        video.preload = 'auto';
-        video.oncanplaythrough = () => resolve({ src, element: video });
-        video.onerror = () => {
-          console.error(`Failed to preload video: ${src}`);
-          resolve({ src, error: true });
-        };
-      });
-    };
-
-    const preloadAllVideos = async () => {
-      try {
-        const videoSources = Array.from({ length: 8 }, (_, i) => ({
-          id: i + 1,
-          src: `/overlay/overlay (${i + 1}).mp4`
-        }));
-        
-        setVideos(videoSources);
-        
-        // Start preloading videos in the background
-        const preloadPromises = videoSources.map(video => 
-          preloadVideo(video.src).then(result => ({ id: video.id, ...result }))
-        );
-        
-        const results = await Promise.all(preloadPromises);
-        const preloadedMap = {};
-        results.forEach(result => {
-          if (!result.error) {
-            preloadedMap[result.id] = result.element;
-          }
-        });
-        setPreloadedVideos(preloadedMap);
-        
-      } catch (err) {
-        console.error("Error in video preloading:", err);
-        setError("Failed to preload videos. Please check the console for more details.");
-      }
-    };
-    
-    preloadAllVideos();
+    // Set up video sources
+    const videoSources = Array.from({ length: 8 }, (_, i) => ({
+      id: i + 1,
+      src: `/overlay/overlay (${i + 1}).mp4`
+    }));
+    setVideos(videoSources);
   }, []);
 
   if (error) {
