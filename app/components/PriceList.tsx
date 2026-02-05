@@ -24,7 +24,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Thumbnail</span>
         <p className="card_paragraph">Custom YouTube thumbnails</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:300</h1>
+        <h1 className='text-white text-xl'>Rs:350</h1>
      </div>
       </div>
      
@@ -41,7 +41,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Logo</span>
         <p className="card_paragraph">Unique logo designs</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:500</h1>
+        <h1 className='text-white text-xl'>Rs:700</h1>
      </div>
       </div>
      
@@ -58,7 +58,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Banner</span>
         <p className="card_paragraph">Custom banners</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:600</h1>
+        <h1 className='text-white text-xl'>Rs:800</h1>
      </div>
       </div>
      
@@ -75,7 +75,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Overlay</span>
         <p className="card_paragraph">Stream overlay designs</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:800/1800</h1>
+        <h1 className='text-white text-xl'>Rs:1000/2000</h1>
      </div>
       </div>
      
@@ -109,7 +109,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">FB Banner</span>
         <p className="card_paragraph">Facebook banner designs</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:800</h1>
+        <h1 className='text-white text-xl'>Rs:1000</h1>
      </div>
       </div>
      
@@ -126,7 +126,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Intro/Outro</span>
         <p className="card_paragraph">Dynamic video intros/outros</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:1000</h1>
+        <h1 className='text-white text-xl'>Rs:1500</h1>
      </div>
       </div>
      
@@ -143,7 +143,7 @@ const PriceList: React.FC = () => {
         <span className="card_title">Jersey Shirts</span>
         <p className="card_paragraph">Custom jersey designs</p>
         </div>
-        <h1 className='text-white text-xl'>Rs:2000</h1>
+        <h1 className='text-white text-xl'>Rs:2500</h1>
      </div>
       </div>
      
